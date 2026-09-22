@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EMPIRE | Luxury Graphic Design</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #090909;
+  color: #f5f0df;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #6d5922;
+  background: #090909;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1150px;
+  margin: auto;
+  padding: 22px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  color: #e9ca70;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover {
+  color: #e9ca70;
+}
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    radial-gradient(circle at center, #252014 0%, #0b0b0b 45%, #050505 100%);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.small-title {
+  color: #d9b94f;
+  letter-spacing: 6px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(55px, 12vw, 120px);
+  letter-spacing: 12px;
+  color: #f0d47b;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #bdbdbd;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  border: 1px solid #d8b94f;
+  color: #e9ca70;
+  letter-spacing: 2px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #e9ca70;
+  color: #111;
+}
+
+.button.gold {
+  background: #e9ca70;
+  color: #111;
+}
+
+section {
+  width: 100%;
+  padding: 90px 20px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.section-heading .small-title {
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 7vw, 62px);
+  margin-bottom: 20px;
+}
+
+.section-heading p {
+  color: #aaa;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #4f421d;
+  padding: 35px 22px;
+  text-align: center;
+  min-width: 0;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #e9ca70;
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.price {
+  color: #e9ca70;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.order-section {
+  background: #0d0d0d;
+}
+
+.order-box {
+  max-width: 750px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #59491e;
+  padding: 35px;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+label {
+  color: #d9b94f;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 7px;
+  background: #080808;
+  color: white;
+  border: 1px solid #51451f;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #e9ca70;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 17px;
+  background: #e9ca70;
+  color: #111;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-button:hover {
+  background: #f4dfa0;
+}
+
+.payment-section {
+  background:
+    radial-gradient(circle at center, #211b0e 0%, #090909 60%);
+}
+
+.payment-box {
+  max-width: 650px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #806824;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.payment-box h3 {
+  font-family: Georgia, serif;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.payment-detail {
+  padding: 18px 10px;
+  border-bottom: 1px solid #312a18;
+}
+
+.payment-detail:last-of-type {
+  border-bottom: none;
+}
+
+.payment-detail span {
+  display: block;
+  color: #a99b70;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+}
+
+.payment-detail strong {
+  font-size: 18px;
+  word-break: break-word;
+}
+
+.payment-note {
+  color: #aaa;
+  line-height: 1.7;
+  margin: 25px 0;
+  font-size: 14px;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  color: #aaa;
+  margin: 10px 0;
+}
+
+footer {
+  border-top: 1px solid #40361b;
+  text-align: center;
+  padding: 30px 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    padding: 18px 15px;
+  }
+
+  .logo {
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 70px 18px;
+  }
+
+  .hero h1 {
+    letter-spacing: 6px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 70px 15px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .order-box,
+  .payment-box {
+    padding: 25px 18px;
+  }
+
+  .payment-box h3 {
+    font-size: 29px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#home" class="logo">EMPIRE</a>
+
+    <div class="nav-links">
+      <a href="#services">SERVICES</a>
+      <a href="#order">ORDER</a>
+      <a href="#payment">PAYMENT</a>
+      <a href="#contact">CONTACT</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <div class="small-title">
+      LUXURY GRAPHIC DESIGN STUDIO
+    </div>
+
+    <h1>EMPIRE</h1>
+
+    <p>
+      Elegant designs created to make your special moments
+      unforgettable.
+    </p>
+
+    <div class="buttons">
+      <a href="#services" class="button gold">
+        EXPLORE SERVICES
+      </a>
+
+      <a href="#order" class="button">
+        PLACE AN ORDER
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="services">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <div class="small-title">
+        WHAT WE CREATE
+      </div>
+
+      <h2>Our Services</h2>
+
+      <p>
+        Premium card designs carefully created for your
+        most important occasions.
+      </p>
+
+    </div>
+
+
+    <div class="services">
+
+      <div class="card">
+        <div class="icon">🎂</div>
+
+        <h3>Birthday Cards</h3>
+
+        <p>
+          Beautiful custom designs made to celebrate
+          birthdays in style.
+        </p>
+
+        <div class="price">₦2,000</div>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">💍</div>
+
+        <h3>Wedding Cards</h3>
+
+        <p>
+          Elegant wedding invitations designed for
+          unforgettable moments.
+        </p>
+
+        <div class="price">₦5,000</div>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">💼</div>
+
+        <h3>Official Cards</h3>
+
+        <p>
+          Professional and clean designs for official
+          events and occasions.
+        </p>
+
+        <div class="price">₦3,000</div>
+      </div>
+
+
+      <div class="card">
+        <div class="icon">✨</div>
+
+        <h3>Other Events</h3>
+
+        <p>
+          Custom designs for other special events,
+          according to your requirements.
+        </p>
+
+        <div class="price">₦2,000–₦15,000</div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="order-section" id="order">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <div class="small-title">
+        LET'S CREATE
+      </div>
+
+      <h2>Place Your Order</h2>
+
+      <p>
+        Fill in your details and your order will be
+        prepared for WhatsApp.
+      </p>
+
+    </div>
+
+
+    <div class="order-box">
+
+      <form onsubmit="sendOrder(event)">
+
+        <label>
+          Your Name
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+          >
+        </label>
+
+
+        <label>
+          WhatsApp Number
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your WhatsApp number"
+            required
+          >
+        </label>
+
+
+        <label>
+          Card Type
+
+          <select id="card" required>
+
+            <option value="">
+              Select a card
+            </option>
+
+            <option value="Birthday Card - ₦2,000">
+              Birthday Card — ₦2,000
+            </option>
+
+            <option value="Wedding Card - ₦5,000">
+              Wedding Card — ₦5,000
+            </option>
+
+            <option value="Official Card - ₦3,000">
+              Official Card — ₦3,000
+            </option>
+
+            <option value="Other Event Card - ₦2,000 to ₦15,000">
+              Other Event Card — ₦2,000–₦15,000
+            </option>
+
+          </select>
+
+        </label>
+
+
+        <label>
+          Event Date
+
+          <input
+            type="date"
+            id="date"
+            required
+          >
+        </label>
+
+
+        <label>
+          Design Details
+
+          <textarea
+            id="details"
+            placeholder="Tell us what you want on the design..."
+            required
+          ></textarea>
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="submit-button"
+        >
+          SEND ORDER ON WHATSAPP
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="payment-section" id="payment">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <div class="small-title">
+        PAYMENT
+      </div>
+
+      <h2>Payment Details</h2>
+
+      <p>
+        After placing your order, make your payment
+        using the account below.
+      </p>
+
+    </div>
+
+
+    <div class="payment-box">
+
+      <h3>Bank Transfer</h3>
+
+
+      <div class="payment-detail">
+        <span>BANK</span>
+        <strong>PalmPay Limited</strong>
+      </div>
+
+
+      <div class="payment-detail">
+        <span>ACCOUNT NAME</span>
+        <strong>ATENAGA KAREEN EGWONO</strong>
+      </div>
+
+
+      <div class="payment-detail">
+        <span>ACCOUNT NUMBER</span>
+        <strong>9033641117</strong>
+      </div>
+
+
+      <p class="payment-note">
+        Please confirm the account name before making
+        your transfer. After payment, send your receipt
+        through WhatsApp with your order details.
+      </p>
+
+
+      <a
+        class="button gold"
+        href="https://wa.me/2348029580490?text=Hello%20EMPIRE!%20I%20have%20made%20a%20payment.%20I%20would%20like%20to%20send%20my%20payment%20receipt."
+        target="_blank"
+      >
+        SEND PAYMENT RECEIPT
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="section-inner">
+
+    <div class="section-heading">
+
+      <div class="small-title">
+        GET IN TOUCH
+      </div>
+
+      <h2>Contact EMPIRE</h2>
+
+      <p>
+        Ready for your design? Contact us directly on
+        WhatsApp.
+      </p>
+
+    </div>
+
+
+    <p><strong>Location:</strong> Abuja, Nigeria</p>
+
+    <p><strong>WhatsApp:</strong> 08029580490</p>
+
+
+    <div class="buttons">
+
+      <a
+        class="button gold"
+        href="https://wa.me/2348029580490"
+        target="_blank"
+      >
+        CHAT ON WHATSAPP
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+  © 2026 EMPIRE Graphic Design. All rights reserved.
+</footer>
+
+
+<script>
+
+function sendOrder(event) {
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value;
+
+  const phone =
+    document.getElementById("phone").value;
+
+  const card =
+    document.getElementById("card").value;
+
+  const date =
+    document.getElementById("date").value;
+
+  const details =
+    document.getElementById("details").value;
+
+
+  const message =
+    "Hello EMPIRE!%0A%0A" +
+    "I would like to place an order.%0A%0A" +
+    "Name: " +
+    encodeURIComponent(name) +
+    "%0A" +
+    "WhatsApp: " +
+    encodeURIComponent(phone) +
+    "%0A" +
+    "Card: " +
+    encodeURIComponent(card) +
+    "%0A" +
+    "Event Date: " +
+    encodeURIComponent(date) +
+    "%0A" +
+    "Design Details: " +
+    encodeURIComponent(details);
+
+
+  window.open(
+    "https://wa.me/2348029580490?text=" +
+    message,
+    "_blank"
+  );
+
+}
+
+</script>
+
+</body>
+</html>
