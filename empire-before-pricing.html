@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#070707">
+<meta name="description" content="EMPIRE — Premium Graphic Design Studio in Abuja, Nigeria.">
+<title>EMPIRE — The Art of Distinction</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+ --black:#050505;
+ --black2:#0b0b0b;
+ --gold:#d4af6a;
+ --gold2:#f1d99b;
+ --cream:#f7f0e2;
+ --muted:#9b968d;
+ --line:rgba(212,175,106,.22);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ background:var(--black);
+ color:var(--cream);
+ font-family:Montserrat,Arial,sans-serif;
+ overflow-x:hidden;
+}
+
+body:before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ opacity:.035;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+ z-index:9999;
+}
+
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+
+header{
+ position:fixed;
+ top:0;
+ left:0;
+ right:0;
+ z-index:1000;
+ padding:20px 5%;
+ transition:.4s;
+}
+
+header.scrolled{
+ background:rgba(5,5,5,.82);
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--line);
+}
+
+.nav{
+ max-width:1400px;
+ margin:auto;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+
+.logo{
+ font-family:"Cormorant Garamond",serif;
+ font-size:32px;
+ font-weight:700;
+ letter-spacing:9px;
+ color:var(--gold2);
+}
+
+.logo small{
+ display:block;
+ font-family:Montserrat,sans-serif;
+ font-size:6px;
+ letter-spacing:5px;
+ text-align:center;
+ margin-top:-5px;
+ color:var(--muted);
+}
+
+nav{
+ display:flex;
+ gap:28px;
+}
+
+nav a{
+ font-size:10px;
+ letter-spacing:2px;
+ color:#c9c4ba;
+ position:relative;
+ padding:8px 0;
+}
+
+nav a:after{
+ content:"";
+ position:absolute;
+ left:0;
+ bottom:0;
+ width:0;
+ height:1px;
+ background:var(--gold);
+ transition:.3s;
+}
+
+nav a:hover{color:var(--gold2)}
+nav a:hover:after{width:100%}
+
+.hero{
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ position:relative;
+ overflow:hidden;
+ background:
+ radial-gradient(circle at 50% 45%,rgba(212,175,106,.13),transparent 24%),
+ radial-gradient(circle at 50% 45%,rgba(255,255,255,.025),transparent 48%),
+ #050505;
+}
+
+.hero:before,
+.hero:after{
+ content:"";
+ position:absolute;
+ border:1px solid rgba(212,175,106,.1);
+ border-radius:50%;
+ transform:translate(-50%,-50%);
+ left:50%;
+ top:50%;
+}
+
+.hero:before{width:620px;height:620px}
+.hero:after{width:850px;height:850px}
+
+.hero-content{
+ position:relative;
+ z-index:2;
+ max-width:1000px;
+ padding:120px 20px 70px;
+}
+
+.eyebrow{
+ font-size:10px;
+ letter-spacing:6px;
+ color:var(--gold);
+ margin-bottom:28px;
+}
+
+.hero h1{
+ font-family:"Cormorant Garamond",serif;
+ font-size:clamp(85px,17vw,190px);
+ line-height:.72;
+ letter-spacing:12px;
+ font-weight:500;
+}
+
+.hero h1 span{
+ display:block;
+ color:var(--gold2);
+}
+
+.hero-line{
+ width:90px;
+ height:1px;
+ background:var(--gold);
+ margin:38px auto 25px;
+}
+
+.hero p{
+ color:#aaa59b;
+ max-width:580px;
+ margin:auto;
+ font-size:12px;
+ line-height:2;
+ letter-spacing:1.2px;
+}
+
+.hero-buttons{
+ margin-top:40px;
+ display:flex;
+ justify-content:center;
+ gap:14px;
+ flex-wrap:wrap;
+}
+
+.btn{
+ padding:15px 28px;
+ border:1px solid var(--gold);
+ color:var(--gold2);
+ font-size:9px;
+ letter-spacing:2.5px;
+ text-transform:uppercase;
+ transition:.4s;
+ display:inline-block;
+}
+
+.btn:hover{
+ background:var(--gold);
+ color:#050505;
+ box-shadow:0 10px 40px rgba(212,175,106,.18);
+}
+
+.btn.gold{
+ background:var(--gold);
+ color:#050505;
+}
+
+.scroll{
+ position:absolute;
+ bottom:28px;
+ left:50%;
+ transform:translateX(-50%);
+ font-size:7px;
+ letter-spacing:4px;
+ color:#777;
+}
+
+section{
+ max-width:1400px;
+ margin:auto;
+ padding:120px 5%;
+}
+
+.section-head{
+ text-align:center;
+ margin-bottom:60px;
+}
+
+.kicker{
+ color:var(--gold);
+ font-size:9px;
+ letter-spacing:5px;
+}
+
+.section-head h2{
+ font-family:"Cormorant Garamond",serif;
+ font-size:58px;
+ font-weight:500;
+ margin-top:8px;
+ letter-spacing:2px;
+}
+
+.section-head p{
+ max-width:600px;
+ margin:15px auto 0;
+ color:#77736c;
+ font-size:11px;
+ line-height:1.9;
+}
+
+.about-grid{
+ display:grid;
+ grid-template-columns:1fr 1.3fr;
+ gap:80px;
+ align-items:center;
+}
+
+.about-mark{
+ border:1px solid var(--line);
+ min-height:390px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ position:relative;
+ background:linear-gradient(145deg,#101010,#070707);
+}
+
+.about-mark:before,
+.about-mark:after{
+ content:"";
+ position:absolute;
+ border:1px solid rgba(212,175,106,.15);
+ width:80%;
+ height:80%;
+}
+
+.about-mark:before{transform:rotate(45deg)}
+.about-mark:after{transform:rotate(-45deg)}
+
+.big-e{
+ font-family:"Cormorant Garamond",serif;
+ font-size:170px;
+ color:var(--gold);
+ font-weight:500;
+ position:relative;
+ z-index:2;
+}
+
+.about-copy h3{
+ font-family:"Cormorant Garamond",serif;
+ font-size:42px;
+ font-weight:500;
+ margin-bottom:20px;
+}
+
+.about-copy h3 span{color:var(--gold)}
+
+.about-copy p{
+ color:#98948c;
+ font-size:12px;
+ line-height:2.1;
+ margin-bottom:25px;
+}
+
+.signature{
+ font-family:"Cormorant Garamond",serif;
+ color:var(--gold);
+ font-size:25px;
+ letter-spacing:2px;
+}
+
+.services{
+ background:#080808;
+ max-width:none;
+}
+
+.services-inner{max-width:1400px;margin:auto}
+
+.service-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ border-top:1px solid var(--line);
+ border-left:1px solid var(--line);
+}
+
+.service{
+ min-height:290px;
+ padding:35px 25px;
+ border-right:1px solid var(--line);
+ border-bottom:1px solid var(--line);
+ position:relative;
+ transition:.5s;
+ background:linear-gradient(145deg,#0c0c0c,#070707);
+}
+
+.service:hover{
+ background:linear-gradient(145deg,#15130f,#090909);
+ transform:translateY(-5px);
+}
+
+.service-number{
+ color:#5e574c;
+ font-size:10px;
+ letter-spacing:2px;
+}
+
+.service-icon{
+ font-size:25px;
+ margin:35px 0 18px;
+ filter:grayscale(1);
+}
+
+.service h3{
+ font-family:"Cormorant Garamond",serif;
+ font-size:30px;
+ font-weight:500;
+ color:#eee6d8;
+}
+
+.service p{
+ color:#77736c;
+ font-size:10px;
+ line-height:1.8;
+ margin-top:10px;
+}
+
+.price{
+ position:absolute;
+ bottom:25px;
+ color:var(--gold);
+ font-size:12px;
+ letter-spacing:1px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+ display:grid;
+ grid-template-columns:repeat(12,1fr);
+ gap:14px;
+}
+
+.portfolio-card{
+ min-height:330px;
+ border:1px solid var(--line);
+ position:relative;
+ overflow:hidden;
+ background:
+ radial-gradient(circle at 50% 40%,rgba(212,175,106,.12),transparent 30%),
+ linear-gradient(145deg,#111,#070707);
+ transition:.5s;
+}
+
+.portfolio-card:nth-child(1){grid-column:span 7}
+.portfolio-card:nth-child(2){grid-column:span 5}
+.portfolio-card:nth-child(3){grid-column:span 5}
+.portfolio-card:nth-child(4){grid-column:span 7}
+.portfolio-card:nth-child(5){grid-column:span 4}
+.portfolio-card:nth-child(6){grid-column:span 4}
+.portfolio-card:nth-child(7){grid-column:span 4}
+
+.portfolio-card:hover{
+ border-color:rgba(212,175,106,.65);
+ transform:translateY(-5px);
+}
+
+.portfolio-placeholder{
+ position:absolute;
+ inset:0;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:25px;
+}
+
+.portfolio-number{
+ font-family:"Cormorant Garamond",serif;
+ font-size:65px;
+ color:rgba(212,175,106,.25);
+}
+
+.portfolio-placeholder h3{
+ font-family:"Cormorant Garamond",serif;
+ font-size:30px;
+ font-weight:500;
+}
+
+.portfolio-placeholder p{
+ color:#666;
+ font-size:9px;
+ letter-spacing:1px;
+ margin-top:5px;
+}
+
+.portfolio-card:before{
+ content:"";
+ position:absolute;
+ width:180px;
+ height:180px;
+ border:1px solid rgba(212,175,106,.1);
+ border-radius:50%;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+}
+
+/* ORDER */
+
+.order-section{
+ background:
+ linear-gradient(rgba(5,5,5,.94),rgba(5,5,5,.97)),
+ radial-gradient(circle at center,rgba(212,175,106,.12),transparent 45%);
+ max-width:none;
+}
+
+.order-inner{max-width:800px;margin:auto}
+
+.order-box{
+ border:1px solid var(--line);
+ padding:45px;
+ background:rgba(12,12,12,.8);
+ box-shadow:0 30px 100px rgba(0,0,0,.5);
+}
+
+form{display:grid;gap:20px}
+
+.field label{
+ display:block;
+ font-size:8px;
+ letter-spacing:2px;
+ color:var(--gold);
+ margin-bottom:7px;
+}
+
+input,select,textarea{
+ width:100%;
+ border:1px solid #292929;
+ background:#070707;
+ color:#eee;
+ padding:14px;
+ outline:none;
+ border-radius:0;
+ font-size:11px;
+}
+
+input:focus,select:focus,textarea:focus{
+ border-color:var(--gold);
+}
+
+textarea{min-height:120px;resize:vertical}
+
+select option{background:#080808}
+
+.form-button{
+ width:100%;
+ padding:17px;
+ border:1px solid var(--gold);
+ background:var(--gold);
+ color:#050505;
+ cursor:pointer;
+ font-size:9px;
+ font-weight:600;
+ letter-spacing:2px;
+ transition:.3s;
+}
+
+.form-button:hover{
+ background:var(--gold2);
+}
+
+/* PAYMENT */
+
+.payment-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:20px;
+}
+
+.payment-card{
+ border:1px solid var(--line);
+ padding:40px;
+ background:linear-gradient(145deg,#101010,#080808);
+ text-align:center;
+}
+
+.payment-label{
+ color:#6f6a61;
+ font-size:8px;
+ letter-spacing:3px;
+ margin-top:18px;
+}
+
+.payment-value{
+ color:#eee7dc;
+ font-size:14px;
+ margin-top:5px;
+}
+
+.account{
+ font-family:"Cormorant Garamond",serif;
+ color:var(--gold2);
+ font-size:38px;
+ letter-spacing:4px;
+ margin:8px 0 25px;
+}
+
+.payment-note{
+ color:#77736b;
+ font-size:9px;
+ line-height:1.9;
+ margin:20px auto;
+ max-width:450px;
+}
+
+/* CONTACT */
+
+.contact{
+ text-align:center;
+ border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);
+ padding:70px 20px;
+}
+
+.contact h2{
+ font-family:"Cormorant Garamond",serif;
+ font-size:62px;
+ font-weight:500;
+}
+
+.contact h2 span{color:var(--gold)}
+
+.contact p{
+ color:#777;
+ font-size:10px;
+ letter-spacing:1px;
+ margin:12px;
+}
+
+.contact .btn{margin-top:20px}
+
+footer{
+ text-align:center;
+ padding:35px 20px;
+ border-top:1px solid rgba(255,255,255,.04);
+ color:#555;
+ font-size:8px;
+ letter-spacing:2px;
+}
+
+footer span{color:var(--gold)}
+
+@media(max-width:900px){
+ nav{gap:13px}
+ nav a{font-size:8px}
+ .about-grid{grid-template-columns:1fr;gap:40px}
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .portfolio-card,
+ .portfolio-card:nth-child(n){
+  grid-column:span 6;
+ }
+ .payment-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:600px){
+ header{padding:15px 4%}
+ .logo{font-size:25px;letter-spacing:6px}
+ nav{gap:10px}
+ nav a{font-size:7px;letter-spacing:1px}
+ .hero h1{font-size:80px;letter-spacing:6px}
+ .hero:before{width:400px;height:400px}
+ .hero:after{width:560px;height:560px}
+ section{padding:85px 5%}
+ .section-head h2{font-size:45px}
+ .about-mark{min-height:280px}
+ .big-e{font-size:120px}
+ .service-grid{grid-template-columns:1fr}
+ .service{min-height:260px}
+ .portfolio-card,
+ .portfolio-card:nth-child(n){
+  grid-column:span 12;
+  min-height:270px;
+ }
+ .order-box{padding:25px 18px}
+ .contact h2{font-size:45px}
+ .account{font-size:27px}
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+<div class="nav">
+<a href="#home" class="logo">
+EMPIRE
+<small>GRAPHIC DESIGN STUDIO</small>
+</a>
+
+<nav>
+<a href="#about">ABOUT</a>
+<a href="#services">SERVICES</a>
+<a href="#portfolio">PORTFOLIO</a>
+<a href="#order">ORDER</a>
+<a href="#contact">CONTACT</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+<div class="hero-content">
+
+<div class="eyebrow">THE ART OF DISTINCTION</div>
+
+<h1>EM<span>PIRE</span></h1>
+
+<div class="hero-line"></div>
+
+<p>
+A premium graphic design studio creating refined,
+memorable and beautifully crafted visuals for life's
+most important moments.
+</p>
+
+<div class="hero-buttons">
+<a href="#order" class="btn gold">Commission a Design</a>
+<a href="#portfolio" class="btn">Explore Our Work</a>
+</div>
+
+</div>
+
+<div class="scroll">SCROLL TO DISCOVER</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-head">
+<div class="kicker">THE EMPIRE STANDARD</div>
+<h2>Designed to be remembered.</h2>
+</div>
+
+<div class="about-grid">
+
+<div class="about-mark">
+<div class="big-e">E</div>
+</div>
+
+<div class="about-copy">
+<h3>More than design.<br><span>A statement.</span></h3>
+
+<p>
+At EMPIRE, every design is created with intention.
+We combine elegant composition, striking typography
+and thoughtful detail to turn ordinary announcements
+into memorable visual experiences.
+</p>
+
+<p>
+Whether it is a birthday, wedding, official occasion
+or special event, your design deserves to feel as
+important as the moment itself.
+</p>
+
+<div class="signature">EMPIRE</div>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+<div class="services-inner">
+
+<div class="section-head">
+<div class="kicker">WHAT WE CREATE</div>
+<h2>Our Services</h2>
+<p>
+Premium designs for celebrations, announcements,
+events and everything in between.
+</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service">
+<div class="service-number">01 / EMPIRE</div>
+<div class="service-icon">✦</div>
+<h3>Birthday Cards</h3>
+<p>
+Elegant and eye-catching birthday designs
+created around your personality and celebration.
+</p>
+<div class="price">₦2,000</div>
+</div>
+
+<div class="service">
+<div class="service-number">02 / EMPIRE</div>
+<div class="service-icon">◇</div>
+<h3>Wedding Cards</h3>
+<p>
+Sophisticated wedding invitations designed
+to give your special day a beautiful first impression.
+</p>
+<div class="price">₦5,000</div>
+</div>
+
+<div class="service">
+<div class="service-number">03 / EMPIRE</div>
+<div class="service-icon">▱</div>
+<h3>Official Cards</h3>
+<p>
+Clean and professional designs for official,
+formal and business-related occasions.
+</p>
+<div class="price">₦3,000</div>
+</div>
+
+<div class="service">
+<div class="service-number">04 / EMPIRE</div>
+<div class="service-icon">✧</div>
+<h3>Other Event Cards</h3>
+<p>
+Custom designs for parties, ceremonies,
+announcements and other special occasions.
+</p>
+<div class="price">₦2,000 – ₦15,000</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="section-head">
+<div class="kicker">SELECTED WORK</div>
+<h2>The Portfolio</h2>
+<p>
+A dedicated space for the EMPIRE collection.
+Your actual design samples can be placed here later.
+</p>
+</div>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">01</div>
+<h3>Birthday Collection</h3>
+<p>BIRTHDAY DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">02</div>
+<h3>Wedding Collection</h3>
+<p>WEDDING DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">03</div>
+<h3>Official Collection</h3>
+<p>OFFICIAL DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">04</div>
+<h3>Event Collection</h3>
+<p>EVENT DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">05</div>
+<h3>Celebration</h3>
+<p>CUSTOM DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">06</div>
+<h3>Signature</h3>
+<p>EMPIRE DESIGN</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<div class="portfolio-placeholder">
+<div class="portfolio-number">07</div>
+<h3>Custom Work</h3>
+<p>BY EMPIRE</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ORDER -->
+
+<section class="order-section" id="order">
+<div class="order-inner">
+
+<div class="section-head">
+<div class="kicker">BEGIN YOUR PROJECT</div>
+<h2>Commission EMPIRE</h2>
+<p>
+Tell us what you have in mind and we'll take it from there.
+</p>
+</div>
+
+<div class="order-box">
+
+<form onsubmit="sendOrder(event)">
+
+<div class="field">
+<label>YOUR NAME</label>
+<input id="name" type="text" placeholder="Your full name" required>
+</div>
+
+<div class="field">
+<label>DESIGN TYPE</label>
+<select id="design" required>
+<option value="">Select a service</option>
+<option>Birthday Card — ₦2,000</option>
+<option>Wedding Card — ₦5,000</option>
+<option>Official Card — ₦3,000</option>
+<option>Other Event Card — ₦2,000–₦15,000</option>
+</select>
+</div>
+
+<div class="field">
+<label>EVENT DATE</label>
+<input id="date" type="date">
+</div>
+
+<div class="field">
+<label>YOUR VISION</label>
+<textarea id="details" placeholder="Tell EMPIRE about your design..."></textarea>
+</div>
+
+<button class="form-button" type="submit">
+SEND MY REQUEST ON WHATSAPP
+</button>
+
+</form>
+</div>
+</div>
+</section>
+
+<!-- PAYMENT -->
+
+<section id="payment">
+
+<div class="section-head">
+<div class="kicker">SECURE YOUR PROJECT</div>
+<h2>Payment Details</h2>
+<p>
+After payment, send your receipt on WhatsApp with your order details.
+</p>
+</div>
+
+<div class="payment-grid">
+
+<div class="payment-card">
+
+<div class="payment-label">BANK</div>
+<div class="payment-value">PalmPay Limited</div>
+
+<div class="payment-label">ACCOUNT NAME</div>
+<div class="payment-value">ATENAGA KAREEN EGWONO</div>
+
+<div class="payment-label">ACCOUNT NUMBER</div>
+<div class="account">9033641117</div>
+
+<a
+class="btn gold"
+href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20have%20made%20payment%20and%20I%20want%20to%20send%20my%20receipt."
+target="_blank">
+SEND PAYMENT RECEIPT
+</a>
+
+</div>
+
+<div class="payment-card">
+
+<div class="payment-label">PAYMENT PROCESS</div>
+
+<div class="payment-value" style="margin-top:25px">
+01 — Choose your design
+</div>
+
+<div class="payment-value" style="margin-top:20px">
+02 — Make payment
+</div>
+
+<div class="payment-value" style="margin-top:20px">
+03 — Send your receipt
+</div>
+
+<div class="payment-value" style="margin-top:20px">
+04 — EMPIRE begins your design
+</div>
+
+<p class="payment-note">
+Please include your name and order details when
+sending your payment receipt.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact">
+
+<div class="kicker">LET'S CREATE</div>
+
+<h2>Your moment.<br><span>Our craft.</span></h2>
+
+<p>ABUJA, NIGERIA</p>
+<p>WHATSAPP · 08029580490</p>
+
+<a
+class="btn gold"
+href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+target="_blank">
+CHAT WITH EMPIRE
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 <span>EMPIRE</span> — GRAPHIC DESIGN STUDIO
+</footer>
+
+<script>
+const header=document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+ if(window.scrollY>30){
+  header.classList.add("scrolled");
+ }else{
+  header.classList.remove("scrolled");
+ }
+});
+
+function sendOrder(event){
+ event.preventDefault();
+
+ const name=document.getElementById("name").value;
+ const design=document.getElementById("design").value;
+ const date=document.getElementById("date").value || "Not specified";
+ const details=document.getElementById("details").value || "No additional details";
+
+ const message=
+ `Hello EMPIRE,
+
+I would like to commission a design.
+
+Name: ${name}
+Design: ${design}
+Event Date: ${date}
+
+Design Details:
+${details}`;
+
+ window.open(
+  "https://wa.me/2348029580490?text="+encodeURIComponent(message),
+  "_blank"
+ );
+}
+</script>
+
+</body>
+</html>
+EOF

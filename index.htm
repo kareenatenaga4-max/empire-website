@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="EMPIRE Graphic Design — Luxury graphic design for birthdays, weddings, events and official occasions in Abuja, Nigeria.">
+<title>EMPIRE | Graphic Design</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#f5f0e8;
+    line-height:1.6;
+}
+
+:root{
+    --gold:#d6b36a;
+    --light-gold:#f0d59a;
+    --black:#080808;
+    --card:#111111;
+    --border:rgba(214,179,106,.28);
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:5px;
+    color:var(--gold);
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    font-size:13px;
+    letter-spacing:1px;
+    color:#ddd;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+    background:
+        radial-gradient(circle at center,rgba(214,179,106,.13),transparent 38%),
+        linear-gradient(#080808,#0d0d0d);
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.small-title{
+    color:var(--gold);
+    letter-spacing:5px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(55px,12vw,110px);
+    line-height:.9;
+    letter-spacing:8px;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero p{
+    max-width:650px;
+    margin:auto;
+    color:#c8c8c8;
+    font-size:17px;
+}
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border:1px solid var(--gold);
+    border-radius:4px;
+    color:var(--gold);
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--gold);
+    color:#080808;
+}
+
+.btn-main{
+    background:var(--gold);
+    color:#080808;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:var(--gold);
+    font-size:12px;
+    letter-spacing:4px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-top:8px;
+}
+
+.about{
+    text-align:center;
+    max-width:800px;
+}
+
+.about p{
+    color:#c8c8c8;
+    font-size:16px;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:linear-gradient(145deg,#151515,#0d0d0d);
+    border:1px solid var(--border);
+    padding:30px 22px;
+    border-radius:8px;
+    text-align:center;
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+}
+
+.service-icon{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.service-card h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#bbb;
+    font-size:14px;
+    min-height:45px;
+}
+
+.price{
+    margin-top:18px;
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+}
+
+/* PORTFOLIO */
+
+.portfolio-intro{
+    text-align:center;
+    max-width:700px;
+    margin:-20px auto 35px;
+    color:#aaa;
+}
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.portfolio-card{
+    min-height:260px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+    background:#101010;
+    position:relative;
+}
+
+.portfolio-placeholder{
+    min-height:260px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    background:
+        linear-gradient(135deg,rgba(214,179,106,.12),transparent),
+        #101010;
+}
+
+.portfolio-placeholder .number{
+    font-size:40px;
+    color:var(--gold);
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.portfolio-placeholder h3{
+    color:#fff;
+    font-size:19px;
+}
+
+.portfolio-placeholder p{
+    color:#888;
+    font-size:13px;
+    margin-top:5px;
+}
+
+/*
+   WHEN YOU HAVE YOUR REAL DESIGNS:
+   Replace a portfolio-placeholder div with:
+
+   <img src="images/your-design.jpg" alt="Birthday design">
+
+   and create an "images" folder inside ~/mywebsite.
+*/
+
+.order-box{
+    max-width:700px;
+    margin:auto;
+    background:#101010;
+    border:1px solid var(--border);
+    padding:35px;
+    border-radius:10px;
+}
+
+form{
+    display:grid;
+    gap:17px;
+}
+
+label{
+    color:var(--gold);
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:14px;
+    margin-top:7px;
+    border-radius:4px;
+    border:1px solid #333;
+    background:#080808;
+    color:#fff;
+    outline:none;
+}
+
+input:focus,select:focus,textarea:focus{
+    border-color:var(--gold);
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.payment{
+    max-width:700px;
+    margin:auto;
+    background:linear-gradient(145deg,#141414,#0b0b0b);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:35px;
+    text-align:center;
+}
+
+.payment h3{
+    color:var(--gold);
+    margin:20px 0 8px;
+}
+
+.payment p{
+    color:#ccc;
+}
+
+.account-number{
+    font-size:28px;
+    letter-spacing:3px;
+    color:#fff;
+    margin:10px 0;
+}
+
+.note{
+    margin-top:20px;
+    color:#999;
+    font-size:13px;
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#aaa;
+    margin:10px 0;
+}
+
+.whatsapp{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 30px;
+    background:#d6b36a;
+    color:#080808;
+    font-weight:bold;
+    border-radius:5px;
+}
+
+footer{
+    border-top:1px solid var(--border);
+    text-align:center;
+    padding:30px 20px;
+    color:#777;
+    font-size:13px;
+}
+
+footer strong{
+    color:var(--gold);
+}
+
+@media(max-width:900px){
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    nav{
+        gap:12px;
+    }
+}
+
+@media(max-width:600px){
+    .navbar{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:58px;
+        letter-spacing:5px;
+    }
+
+    .services-grid,
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:65px 16px;
+    }
+
+    .order-box,
+    .payment{
+        padding:25px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+    <div class="logo">EMPIRE</div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#portfolio">PORTFOLIO</a>
+        <a href="#order">ORDER</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+    <div class="small-title">CREATIVE • PREMIUM • ELEGANT</div>
+
+    <h1>EM<span>PIRE</span></h1>
+
+    <p>
+        Premium graphic design for birthdays, weddings,
+        events, official occasions and special moments.
+    </p>
+
+    <div class="buttons">
+        <a class="btn btn-main" href="#order">ORDER A DESIGN</a>
+        <a class="btn" href="#portfolio">VIEW PORTFOLIO</a>
+    </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="section-title">
+    <span>WHO WE ARE</span>
+    <h2>ABOUT EMPIRE</h2>
+</div>
+
+<div class="about">
+    <p>
+        EMPIRE is a graphic design brand focused on creating
+        clean, attractive and memorable designs for every occasion.
+        From birthday celebrations to weddings, official designs
+        and special events, we turn your ideas into visuals that stand out.
+    </p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="section-title">
+    <span>WHAT WE CREATE</span>
+    <h2>OUR SERVICES</h2>
+</div>
+
+<div class="services-grid">
+
+    <div class="service-card">
+        <div class="service-icon">🎂</div>
+        <h3>Birthday Cards</h3>
+        <p>Beautiful birthday designs made for your special celebration.</p>
+        <div class="price">₦2,000</div>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">💍</div>
+        <h3>Wedding Cards</h3>
+        <p>Elegant wedding invitations and celebration designs.</p>
+        <div class="price">₦5,000</div>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Official Cards</h3>
+        <p>Professional designs for official and formal occasions.</p>
+        <div class="price">₦3,000</div>
+    </div>
+
+    <div class="service-card">
+        <div class="service-icon">🎉</div>
+        <h3>Other Event Cards</h3>
+        <p>Custom designs for different events and special occasions.</p>
+        <div class="price">₦2,000 – ₦15,000</div>
+    </div>
+
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<div class="section-title">
+    <span>OUR WORK</span>
+    <h2>PORTFOLIO</h2>
+</div>
+
+<p class="portfolio-intro">
+    A selection of EMPIRE design categories. Real design samples
+    can be added here whenever you're ready.
+</p>
+
+<div class="portfolio-grid">
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">01</div>
+            <h3>Birthday Designs</h3>
+            <p>Your birthday design samples will appear here.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">02</div>
+            <h3>Wedding Designs</h3>
+            <p>Your wedding design samples will appear here.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">03</div>
+            <h3>Official Designs</h3>
+            <p>Your official design samples will appear here.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">04</div>
+            <h3>Event Designs</h3>
+            <p>Your event design samples will appear here.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">05</div>
+            <h3>Custom Designs</h3>
+            <p>Custom EMPIRE designs will appear here.</p>
+        </div>
+    </div>
+
+    <div class="portfolio-card">
+        <div class="portfolio-placeholder">
+            <div class="number">06</div>
+            <h3>More From EMPIRE</h3>
+            <p>More design work can be showcased here.</p>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+<div class="section-title">
+    <span>START YOUR PROJECT</span>
+    <h2>PLACE AN ORDER</h2>
+</div>
+
+<div class="order-box">
+
+<form onsubmit="sendOrder(event)">
+
+    <div>
+        <label>YOUR NAME</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div>
+        <label>DESIGN TYPE</label>
+
+        <select id="design" required>
+            <option value="">Select a design</option>
+            <option>Birthday Card — ₦2,000</option>
+            <option>Wedding Card — ₦5,000</option>
+            <option>Official Card — ₦3,000</option>
+            <option>Other Event Card — ₦2,000–₦15,000</option>
+        </select>
+    </div>
+
+    <div>
+        <label>EVENT DATE</label>
+        <input type="date" id="date">
+    </div>
+
+    <div>
+        <label>DESIGN DETAILS</label>
+        <textarea id="details" placeholder="Tell us what you want on the design..." required></textarea>
+    </div>
+
+    <button class="btn btn-main" type="submit">
+        SEND ORDER ON WHATSAPP
+    </button>
+
+</form>
+
+</div>
+</section>
+
+<!-- PAYMENT -->
+<section id="payment">
+<div class="section-title">
+    <span>PAYMENT INFORMATION</span>
+    <h2>MAKE PAYMENT</h2>
+</div>
+
+<div class="payment">
+
+    <h3>BANK</h3>
+    <p>PalmPay Limited</p>
+
+    <h3>ACCOUNT NAME</h3>
+    <p>ATENAGA KAREEN EGWONO</p>
+
+    <h3>ACCOUNT NUMBER</h3>
+    <div class="account-number">9033641117</div>
+
+    <p class="note">
+        After making payment, send your payment receipt
+        together with your order details on WhatsApp.
+    </p>
+
+    <a class="btn btn-main" href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20have%20made%20payment%20and%20I%20want%20to%20send%20my%20receipt." target="_blank">
+        SEND PAYMENT RECEIPT
+    </a>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="section-title">
+    <span>GET IN TOUCH</span>
+    <h2>CONTACT EMPIRE</h2>
+</div>
+
+<div class="contact">
+    <p>📍 Abuja, Nigeria</p>
+    <p>📱 WhatsApp: 08029580490</p>
+
+    <a class="whatsapp"
+       href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20would%20like%20to%20make%20an%20inquiry."
+       target="_blank">
+       CHAT WITH EMPIRE
+    </a>
+</div>
+</section>
+
+</main>
+
+<footer>
+    © 2026 <strong>EMPIRE</strong> — Graphic Design.
+    All rights reserved.
+</footer>
+
+<script>
+function sendOrder(event){
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const design = document.getElementById("design").value;
+    const date = document.getElementById("date").value || "Not specified";
+    const details = document.getElementById("details").value;
+
+    const message =
+        "Hello EMPIRE,%0A%0A" +
+        "I would like to place a design order.%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Design: " + encodeURIComponent(design) + "%0A" +
+        "Event Date: " + encodeURIComponent(date) + "%0A" +
+        "Details: " + encodeURIComponent(details);
+
+    window.open(
+        "https://wa.me/2348029580490?text=" + message,
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
+EO
