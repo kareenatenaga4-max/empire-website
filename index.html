@@ -1113,6 +1113,146 @@ font-size:39px;
 
 }
 
+.order-trust{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:18px 20px;
+    border:1px solid rgba(212,175,106,.14);
+    background:rgba(212,175,106,.025);
+    flex:1;
+}
+
+.order-trust > span{
+    color:var(--gold);
+    font-size:12px;
+    line-height:1.4;
+}
+
+.order-trust strong{
+    display:block;
+    margin-bottom:8px;
+    color:#d8cdbd;
+    font-size:7px;
+    letter-spacing:2px;
+    line-height:1.5;
+}
+
+.order-trust p{
+    margin:0;
+    color:#70695f;
+    font-size:8px;
+    line-height:1.8;
+    max-width:390px;
+}
+
+@media(max-width:800px){
+    .order-trust{
+        width:100%;
+        box-sizing:border-box;
+    }
+}
+
+.order-journey{
+    margin-bottom:30px;
+    padding:24px;
+    border:1px solid rgba(212,175,106,.15);
+    background:
+    linear-gradient(
+        135deg,
+        rgba(212,175,106,.035),
+        rgba(0,0,0,.15)
+    );
+}
+
+.order-journey-head{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding-bottom:18px;
+    border-bottom:1px solid rgba(212,175,106,.1);
+}
+
+.order-journey-head span{
+    font-size:7px;
+    letter-spacing:3px;
+    color:var(--gold);
+}
+
+.order-journey-head strong{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#d8cdbd;
+}
+
+.order-journey-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    margin-top:20px;
+}
+
+.order-journey-grid div{
+    padding:15px;
+    border-left:1px solid rgba(212,175,106,.1);
+}
+
+.order-journey-grid div:first-child{
+    border-left:none;
+}
+
+.order-journey-grid span{
+    display:block;
+    margin-bottom:13px;
+    color:var(--gold);
+    font-size:7px;
+    letter-spacing:2px;
+}
+
+.order-journey-grid strong{
+    display:block;
+    margin-bottom:8px;
+    color:#e4dacb;
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+.order-journey-grid p{
+    margin:0;
+    color:#70695f;
+    font-size:8px;
+    line-height:1.8;
+}
+
+@media(max-width:800px){
+    .order-journey-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .order-journey-grid div:nth-child(3){
+        border-left:none;
+    }
+}
+
+@media(max-width:500px){
+    .order-journey{
+        padding:20px;
+    }
+
+    .order-journey-grid{
+        grid-template-columns:1fr;
+    }
+
+    .order-journey-grid div{
+        border-left:none;
+        border-bottom:1px solid rgba(212,175,106,.08);
+    }
+
+    .order-journey-grid div:last-child{
+        border-bottom:none;
+    }
+}
+
 /* =========================================================
    EMPIRE PAYMENT
 ========================================================= */
@@ -1350,7 +1490,162 @@ letter-spacing:2px;
 color:#5d574e;
 }
 
+.payment-trust{
+    margin:25px 0 30px;
+    padding:22px;
+    border:1px solid rgba(212,175,106,.14);
+    background:rgba(212,175,106,.025);
+}
 
+.payment-trust-title{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.payment-trust-title span{
+    color:var(--gold);
+    font-size:12px;
+}
+
+.payment-trust-title strong{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#d8cdbd;
+}
+
+.payment-trust p{
+    margin:0;
+    max-width:620px;
+    color:#716a61;
+    font-size:9px;
+    line-height:1.9;
+}
+
+.payment-steps{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 22px;
+    margin-top:18px;
+    padding-top:16px;
+    border-top:1px solid rgba(212,175,106,.1);
+}
+
+.payment-steps span{
+    font-size:7px;
+    letter-spacing:2px;
+    color:var(--gold);
+}
+
+@media(max-width:500px){
+    .payment-trust{
+        padding:18px;
+    }
+
+    .payment-steps{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:14px;
+    }
+}
+
+.payment-verify-note{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    margin:0 0 18px;
+    padding:18px 20px;
+    border-left:2px solid var(--gold);
+    background:rgba(212,175,106,.025);
+}
+
+.payment-verify-note > span{
+    color:var(--gold);
+    font-size:12px;
+    line-height:1.4;
+}
+
+.payment-verify-note strong{
+    display:block;
+    margin-bottom:7px;
+    color:#d8cdbd;
+    font-size:7px;
+    letter-spacing:2px;
+}
+
+.payment-verify-note p{
+    margin:0;
+    color:#70695f;
+    font-size:8px;
+    line-height:1.8;
+}
+
+.before-pay{
+    margin:25px 0 30px;
+    padding:24px;
+    border:1px solid rgba(212,175,106,.15);
+    background:#0b0b0b;
+}
+
+.before-pay-head{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding-bottom:18px;
+    margin-bottom:4px;
+    border-bottom:1px solid rgba(212,175,106,.1);
+}
+
+.before-pay-head span{
+    font-size:7px;
+    letter-spacing:3px;
+    color:var(--gold);
+}
+
+.before-pay-head strong{
+    font-size:8px;
+    letter-spacing:2px;
+    color:#d8cdbd;
+}
+
+.before-pay-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0 25px;
+}
+
+.before-pay-list div{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:17px 0;
+    border-bottom:1px solid rgba(212,175,106,.08);
+}
+
+.before-pay-list span{
+    color:var(--gold);
+    font-size:7px;
+    letter-spacing:2px;
+    padding-top:2px;
+}
+
+.before-pay-list p{
+    margin:0;
+    color:#716a61;
+    font-size:8px;
+    line-height:1.8;
+}
+
+@media(max-width:600px){
+    .before-pay{
+        padding:20px;
+    }
+
+    .before-pay-list{
+        grid-template-columns:1fr;
+    }
+}
 
 /* =========================================================
    EMPIRE CONTACT
@@ -3422,6 +3717,15 @@ Your order details will be sent directly to EMPIRE on WhatsApp.
 
 </div>
 
+<div class="order-trust">
+    <span>✦</span>
+    <div>
+        <strong>YOUR DETAILS ARE REVIEWED BEFORE PAYMENT</strong>
+        <p>
+            We'll confirm your design requirements and agreed price with you on WhatsApp before you make any payment.
+        </p>
+    </div>
+</div>
 
 <button
 type="submit"
@@ -3460,6 +3764,41 @@ Our craft.
 <p>
 Every EMPIRE design begins with your vision and is carefully shaped into something distinctive.
 </p>
+
+<div class="order-journey">
+    <div class="order-journey-head">
+        <span>02</span>
+        <strong>YOUR COMMISSION JOURNEY</strong>
+    </div>
+
+    <div class="order-journey-grid">
+
+        <div>
+            <span>01</span>
+            <strong>CONFIRM</strong>
+            <p>We review your request and confirm the design requirements and agreed price.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <strong>PAY</strong>
+            <p>After confirmation, payment is made using the official account displayed on the website.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <strong>CREATE</strong>
+            <p>Your commissioned design moves into production according to the agreed requirements.</p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <strong>RECEIVE</strong>
+            <p>Your completed design is delivered through WhatsApp in the agreed format.</p>
+        </div>
+
+    </div>
+</div>
 
 <div class="order-process">
 
@@ -3599,8 +3938,68 @@ Please confirm the account name before making your transfer. After payment, send
 
 </div>
 
+<div class="before-pay">
+    <div class="before-pay-head">
+        <span>02</span>
+        <strong>BEFORE YOU PAY</strong>
+    </div>
+
+    <div class="before-pay-list">
+        <div>
+            <span>01</span>
+            <p>Confirm your design and agreed price with EMPIRE.</p>
+        </div>
+
+        <div>
+            <span>02</span>
+            <p>Check that the account name matches the official details above.</p>
+        </div>
+
+        <div>
+            <span>03</span>
+            <p>Transfer only to the account displayed on this website.</p>
+        </div>
+
+        <div>
+            <span>04</span>
+            <p>Keep your payment receipt and send it through the official WhatsApp number.</p>
+        </div>
+    </div>
+</div>
+
+<div class="payment-trust">
+    <div class="payment-trust-title">
+        <span>✦</span>
+        <strong>YOUR SECURITY MATTERS</strong>
+    </div>
+
+    <p>
+        Before you pay, confirm the design, price and account details with EMPIRE.
+        Transfer only to the official account shown above and send your payment receipt
+        through our official WhatsApp number.
+    </p>
+
+    <div class="payment-steps">
+        <span>01 · CONFIRM</span>
+        <span>02 · PAY</span>
+        <span>03 · VERIFY</span>
+        <span>04 · RECEIVE</span>
+    </div>
+</div>
+
+<div class="payment-verify-note">
+    <span>✦</span>
+    <div>
+        <strong>PAYMENT CONFIRMATION</strong>
+        <p>
+            After sending your receipt, please wait for payment confirmation on WhatsApp.
+            Your commission proceeds once payment has been verified.
+        </p>
+    </div>
+</div>
 
 <a
+class="payment-button"
 class="payment-button"
 href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20have%20made%20payment%20for%20my%20design.%20I%20would%20like%20to%20send%20my%20payment%20receipt."
 target="_blank"
@@ -3696,7 +4095,9 @@ Something
 Have a design in mind? Whether it's a celebration, wedding, business project or something completely custom, EMPIRE is ready to bring your vision to life.
 </p>
 
+
 <a
+class="payment-button"
 class="contact-cta"
 href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20would%20like%20to%20make%20a%20design%20enquiry."
 target="_blank"
@@ -3824,50 +4225,36 @@ header.classList.remove("scrolled");
 
 
 function sendOrder(event){
+ event.preventDefault();
 
-event.preventDefault();
+ const name=document.getElementById("name").value;
+ const phone=document.getElementById("phone").value;
+ const design=document.getElementById("design").value;
+ const date=document.getElementById("date").value || "Not specified";
+ const details=document.getElementById("details").value || "No additional details";
 
+ const reference=
+ `EMPIRE-${new Date().getFullYear()}-${String(Date.now()).slice(-6)}`;
 
-const name=
-document.getElementById("name").value;
-
-
-const design=
-document.getElementById("design").value;
-
-
-const date=
-document.getElementById("date").value ||
-"Not specified";
-
-
-const details=
-document.getElementById("details").value ||
-"No additional details";
-
-
-const message=
-`Hello EMPIRE,
+ const message=
+ `Hello EMPIRE,
 
 I would like to commission a design.
 
+Order Reference: ${reference}
+
 Name: ${name}
+WhatsApp Number: ${phone}
 Design: ${design}
 Event Date: ${date}
 
 Design Details:
 ${details}`;
 
-
-window.open(
-
-"https://wa.me/2348029580490?text="+
-encodeURIComponent(message),
-
-"_blank"
-
-);
-
+ window.open(
+  "https://wa.me/2348029580490?text="+encodeURIComponent(message),
+  "_blank"
+ );
 }
 
 </script>
