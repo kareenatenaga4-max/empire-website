@@ -1,810 +1,3872 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>EMPIRE | Luxury Graphic Design</title>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#070707">
+<meta name="description" content="EMPIRE — Premium Graphic Design Studio in Abuja, Nigeria.">
+<title>EMPIRE — The Art of Distinction</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root{
+--black:#050505;
+--black2:#0b0b0b;
+--gold:#d4af6a;
+--gold2:#f1d99b;
+--cream:#f7f0e2;
+--muted:#9b968d;
+--line:rgba(212,175,106,.22);
 }
 
-html {
-  scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #090909;
-  color: #f5f0df;
-  overflow-x: hidden;
+html{
+scroll-behavior:smooth
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+body{
+background:var(--black);
+color:var(--cream);
+font-family:Montserrat,Arial,sans-serif;
+overflow-x:hidden;
 }
 
-header {
-  width: 100%;
-  border-bottom: 1px solid #6d5922;
-  background: #090909;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.035;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+z-index:9999;
 }
 
-.navbar {
-  max-width: 1150px;
-  margin: auto;
-  padding: 22px 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+a{
+text-decoration:none;
+color:inherit
 }
 
-.logo {
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 9px;
-  color: #e9ca70;
+button,input,select,textarea{
+font:inherit
 }
 
-.nav-links {
-  display: flex;
-  gap: 28px;
-  font-size: 14px;
-  letter-spacing: 2px;
+header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+padding:20px 5%;
+transition:.4s;
 }
 
-.nav-links a:hover {
-  color: #e9ca70;
+header.scrolled{
+background:rgba(5,5,5,.82);
+backdrop-filter:blur(18px);
+border-bottom:1px solid var(--line);
 }
 
-.hero {
-  min-height: 88vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
-  background:
-    radial-gradient(circle at center, #252014 0%, #0b0b0b 45%, #050505 100%);
+.nav{
+max-width:1400px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
 
-.hero-content {
-  max-width: 850px;
+.logo{
+font-family:"Cormorant Garamond",serif;
+font-size:32px;
+font-weight:700;
+letter-spacing:9px;
+color:var(--gold2);
 }
 
-.small-title {
-  color: #d9b94f;
-  letter-spacing: 6px;
-  font-size: 14px;
-  margin-bottom: 25px;
+.logo small{
+display:block;
+font-family:Montserrat,sans-serif;
+font-size:6px;
+letter-spacing:5px;
+text-align:center;
+margin-top:-5px;
+color:var(--muted);
 }
 
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(55px, 12vw, 120px);
-  letter-spacing: 12px;
-  color: #f0d47b;
-  margin-bottom: 25px;
+nav{
+display:flex;
+gap:28px;
 }
 
-.hero p {
-  max-width: 650px;
-  margin: auto;
-  color: #bdbdbd;
-  font-size: 19px;
-  line-height: 1.8;
+nav a{
+font-size:10px;
+letter-spacing:2px;
+color:#c9c4ba;
+position:relative;
+padding:8px 0;
 }
 
-.buttons {
-  margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+nav a:after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:1px;
+background:var(--gold);
+transition:.3s;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  border: 1px solid #d8b94f;
-  color: #e9ca70;
-  letter-spacing: 2px;
-  font-size: 13px;
-  transition: 0.3s;
+nav a:hover{
+color:var(--gold2)
 }
 
-.button:hover {
-  background: #e9ca70;
-  color: #111;
+nav a:hover:after{
+width:100%
 }
 
-.button.gold {
-  background: #e9ca70;
-  color: #111;
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:
+radial-gradient(circle at 50% 45%,rgba(212,175,106,.13),transparent 24%),
+radial-gradient(circle at 50% 45%,rgba(255,255,255,.025),transparent 48%),
+#050505;
 }
 
-section {
-  width: 100%;
-  padding: 90px 20px;
+.hero:before,
+.hero:after{
+content:"";
+position:absolute;
+border:1px solid rgba(212,175,106,.1);
+border-radius:50%;
+transform:translate(-50%,-50%);
+left:50%;
+top:50%;
 }
 
-.section-inner {
-  max-width: 1100px;
-  margin: auto;
+.hero:before{
+width:620px;
+height:620px
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 55px;
+.hero:after{
+width:850px;
+height:850px
 }
 
-.section-heading .small-title {
-  margin-bottom: 15px;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+padding:120px 20px 70px;
 }
 
-.section-heading h2 {
-  font-family: Georgia, serif;
-  font-size: clamp(38px, 7vw, 62px);
-  margin-bottom: 20px;
+.eyebrow{
+font-size:10px;
+letter-spacing:6px;
+color:var(--gold);
+margin-bottom:28px;
 }
 
-.section-heading p {
-  color: #aaa;
-  max-width: 650px;
-  margin: auto;
-  line-height: 1.8;
+.hero h1{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(85px,17vw,190px);
+line-height:.72;
+letter-spacing:12px;
+font-weight:500;
 }
 
-.services {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+.hero h1 span{
+display:block;
+color:var(--gold2);
 }
 
-.card {
-  background: #111;
-  border: 1px solid #4f421d;
-  padding: 35px 22px;
-  text-align: center;
-  min-width: 0;
-  transition: 0.3s;
+.hero-line{
+width:90px;
+height:1px;
+background:var(--gold);
+margin:38px auto 25px;
 }
 
-.card:hover {
-  border-color: #e9ca70;
-  transform: translateY(-5px);
+.hero p{
+color:#aaa59b;
+max-width:580px;
+margin:auto;
+font-size:12px;
+line-height:2;
+letter-spacing:1.2px;
 }
 
-.icon {
-  font-size: 42px;
-  margin-bottom: 20px;
+.hero-buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
 }
 
-.card h3 {
-  font-family: Georgia, serif;
-  font-size: 28px;
-  margin-bottom: 15px;
+.btn{
+padding:15px 28px;
+border:1px solid var(--gold);
+color:var(--gold2);
+font-size:9px;
+letter-spacing:2.5px;
+text-transform:uppercase;
+transition:.4s;
+display:inline-block;
 }
 
-.card p {
-  color: #aaa;
-  line-height: 1.7;
-  font-size: 15px;
+.btn:hover{
+background:var(--gold);
+color:#050505;
+box-shadow:0 10px 40px rgba(212,175,106,.18);
 }
 
-.price {
-  color: #e9ca70;
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 25px;
+.btn.gold{
+background:var(--gold);
+color:#050505;
 }
 
-.order-section {
-  background: #0d0d0d;
+.scroll{
+position:absolute;
+bottom:28px;
+left:50%;
+transform:translateX(-50%);
+font-size:7px;
+letter-spacing:4px;
+color:#777;
 }
 
-.order-box {
-  max-width: 750px;
-  margin: auto;
-  background: #111;
-  border: 1px solid #59491e;
-  padding: 35px;
+section{
+max-width:1400px;
+margin:auto;
+padding:120px 5%;
 }
 
-form {
-  display: grid;
-  gap: 18px;
+.section-head{
+text-align:center;
+margin-bottom:60px;
 }
 
-label {
-  color: #d9b94f;
-  font-size: 13px;
-  letter-spacing: 1px;
+.kicker{
+color:var(--gold);
+font-size:9px;
+letter-spacing:5px;
 }
 
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 15px;
-  margin-top: 7px;
-  background: #080808;
-  color: white;
-  border: 1px solid #51451f;
-  outline: none;
-  font-size: 15px;
+.section-head h2{
+font-family:"Cormorant Garamond",serif;
+font-size:58px;
+font-weight:500;
+margin-top:8px;
+letter-spacing:2px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #e9ca70;
+.section-head p{
+max-width:600px;
+margin:15px auto 0;
+color:#77736c;
+font-size:11px;
+line-height:1.9;
 }
 
-textarea {
-  min-height: 130px;
-  resize: vertical;
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1.3fr;
+gap:80px;
+align-items:center;
 }
 
-.submit-button {
-  width: 100%;
-  padding: 17px;
-  background: #e9ca70;
-  color: #111;
-  border: none;
-  font-weight: bold;
-  letter-spacing: 2px;
-  cursor: pointer;
-  font-size: 14px;
+.about-mark{
+border:1px solid var(--line);
+min-height:390px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+background:linear-gradient(145deg,#101010,#070707);
 }
 
-.submit-button:hover {
-  background: #f4dfa0;
+.about-mark:before,
+.about-mark:after{
+content:"";
+position:absolute;
+border:1px solid rgba(212,175,106,.15);
+width:80%;
+height:80%;
 }
 
-.payment-section {
-  background:
-    radial-gradient(circle at center, #211b0e 0%, #090909 60%);
+.about-mark:before{
+transform:rotate(45deg)
 }
 
-.payment-box {
-  max-width: 650px;
-  margin: auto;
-  background: #111;
-  border: 1px solid #806824;
-  padding: 40px 30px;
-  text-align: center;
+.about-mark:after{
+transform:rotate(-45deg)
 }
 
-.payment-box h3 {
-  font-family: Georgia, serif;
-  font-size: 34px;
-  margin-bottom: 30px;
+.big-e{
+font-family:"Cormorant Garamond",serif;
+font-size:170px;
+color:var(--gold);
+font-weight:500;
+position:relative;
+z-index:2;
 }
 
-.payment-detail {
-  padding: 18px 10px;
-  border-bottom: 1px solid #312a18;
+.about-copy h3{
+font-family:"Cormorant Garamond",serif;
+font-size:42px;
+font-weight:500;
+margin-bottom:20px;
 }
 
-.payment-detail:last-of-type {
-  border-bottom: none;
+.about-copy h3 span{
+color:var(--gold)
 }
 
-.payment-detail span {
-  display: block;
-  color: #a99b70;
-  font-size: 12px;
-  letter-spacing: 2px;
-  margin-bottom: 7px;
+.about-copy p{
+color:#98948c;
+font-size:12px;
+line-height:2.1;
+margin-bottom:25px;
 }
 
-.payment-detail strong {
-  font-size: 18px;
-  word-break: break-word;
+.signature{
+font-family:"Cormorant Garamond",serif;
+color:var(--gold);
+font-size:25px;
+letter-spacing:2px;
 }
 
-.payment-note {
-  color: #aaa;
-  line-height: 1.7;
-  margin: 25px 0;
-  font-size: 14px;
+
+/* =========================================================
+   EMPIRE SIGNATURE SERVICES
+========================================================= */
+
+.services{
+background:
+radial-gradient(circle at 50% 0%,rgba(212,175,106,.12),transparent 30%),
+radial-gradient(circle at 0% 50%,rgba(212,175,106,.045),transparent 25%),
+#060606;
+max-width:none;
+position:relative;
+overflow:hidden;
 }
 
-.contact {
-  text-align: center;
+.services:before{
+content:"SERVICES";
+position:absolute;
+top:90px;
+left:-30px;
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(100px,18vw,260px);
+font-weight:600;
+color:rgba(212,175,106,.025);
+letter-spacing:15px;
+pointer-events:none;
+white-space:nowrap;
 }
 
-.contact p {
-  color: #aaa;
-  margin: 10px 0;
+.services-inner{
+max-width:1400px;
+margin:auto;
+position:relative;
+z-index:2;
 }
 
-footer {
-  border-top: 1px solid #40361b;
-  text-align: center;
-  padding: 30px 20px;
-  color: #777;
-  font-size: 13px;
+.services .section-head{
+margin-bottom:70px;
 }
 
-@media (max-width: 900px) {
-  .services {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+.services .section-head h2{
+font-size:clamp(55px,7vw,95px);
+line-height:.9;
+letter-spacing:-2px;
 }
 
-@media (max-width: 650px) {
-  .navbar {
-    flex-direction: column;
-    padding: 18px 15px;
-  }
-
-  .logo {
-    font-size: 30px;
-    letter-spacing: 6px;
-  }
-
-  .nav-links {
-    width: 100%;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 75vh;
-    padding: 70px 18px;
-  }
-
-  .hero h1 {
-    letter-spacing: 6px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 70px 15px;
-  }
-
-  .services {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .order-box,
-  .payment-box {
-    padding: 25px 18px;
-  }
-
-  .payment-box h3 {
-    font-size: 29px;
-  }
+.services .section-head p{
+max-width:540px;
 }
+
+
+/* CATEGORY */
+
+.service-category{
+margin-bottom:18px;
+border:1px solid rgba(212,175,106,.18);
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.025),
+rgba(255,255,255,.005)
+);
+position:relative;
+transition:.5s ease;
+}
+
+.service-category:hover{
+border-color:rgba(212,175,106,.4);
+box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.service-category[open]{
+border-color:rgba(212,175,106,.45);
+box-shadow:
+0 30px 90px rgba(0,0,0,.5),
+inset 0 0 60px rgba(212,175,106,.025);
+}
+
+.service-category summary{
+list-style:none;
+cursor:pointer;
+min-height:115px;
+padding:25px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+position:relative;
+overflow:hidden;
+}
+
+.service-category summary::-webkit-details-marker{
+display:none;
+}
+
+.service-category summary:before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:0;
+height:100%;
+background:linear-gradient(
+90deg,
+rgba(212,175,106,.09),
+transparent
+);
+transition:.6s ease;
+}
+
+.service-category summary:hover:before,
+.service-category[open] summary:before{
+width:100%;
+}
+
+.service-category summary:after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:1px;
+background:linear-gradient(
+90deg,
+var(--gold),
+transparent
+);
+transition:.7s ease;
+}
+
+.service-category[open] summary:after{
+width:100%;
+}
+
+
+/* CATEGORY LEFT */
+
+.category-left{
+display:flex;
+align-items:center;
+gap:24px;
+position:relative;
+z-index:2;
+}
+
+.category-number{
+font-size:9px;
+letter-spacing:3px;
+color:#665e52;
+min-width:35px;
+}
+
+.category-icon{
+width:55px;
+height:55px;
+border:1px solid rgba(212,175,106,.38);
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--gold);
+font-size:21px;
+position:relative;
+transition:.5s ease;
+}
+
+.category-icon:before{
+content:"";
+position:absolute;
+inset:5px;
+border:1px solid rgba(212,175,106,.12);
+}
+
+.service-category:hover .category-icon{
+transform:rotate(45deg);
+border-color:var(--gold);
+box-shadow:0 0 30px rgba(212,175,106,.12);
+}
+
+.service-category[open] .category-icon{
+transform:rotate(45deg);
+background:rgba(212,175,106,.08);
+}
+
+.category-title{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(30px,3vw,43px);
+font-weight:500;
+color:#f0e8da;
+line-height:1;
+letter-spacing:.3px;
+transition:.4s;
+}
+
+.service-category:hover .category-title{
+color:var(--gold2);
+}
+
+.category-subtitle{
+margin-top:8px;
+color:#676157;
+font-size:8px;
+letter-spacing:3px;
+}
+
+
+/* TOGGLE */
+
+.category-toggle{
+width:48px;
+height:48px;
+flex-shrink:0;
+border:1px solid rgba(212,175,106,.35);
+display:flex;
+align-items:center;
+justify-content:center;
+color:var(--gold);
+font-size:23px;
+font-weight:300;
+position:relative;
+z-index:2;
+transition:.5s ease;
+}
+
+.service-category:hover .category-toggle{
+border-color:var(--gold);
+}
+
+.service-category[open] .category-toggle{
+transform:rotate(45deg);
+background:var(--gold);
+color:#050505;
+}
+
+/* =========================================================
+   EMPIRE PORTFOLIO
+========================================================= */
+
+.portfolio{
+max-width:none;
+background:
+radial-gradient(
+circle at 50% 0%,
+rgba(212,175,106,.07),
+transparent 32%
+),
+#060606;
+overflow:hidden;
+}
+
+.portfolio .section-head{
+max-width:1400px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.portfolio-grid{
+max-width:1400px;
+margin:60px auto 0;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:3px;
+}
+
+.portfolio-item{
+position:relative;
+overflow:hidden;
+background:#0a0a0a;
+}
+
+.portfolio-wide{
+grid-column:1/-1;
+}
+
+.portfolio-image{
+position:relative;
+width:100%;
+aspect-ratio:4/5;
+overflow:hidden;
+background:
+linear-gradient(
+135deg,
+#17140f,
+#070707
+);
+}
+
+.portfolio-wide .portfolio-image{
+aspect-ratio:16/7;
+}
+
+.portfolio-image img{
+width:100%;
+height:100%;
+display:block;
+object-fit:cover;
+transition:
+transform .9s cubic-bezier(.2,.7,.2,1),
+filter .8s ease;
+}
+
+.portfolio-item:hover img{
+transform:scale(1.07);
+filter:brightness(.65);
+}
+
+.portfolio-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:55px 32px 30px;
+background:
+linear-gradient(
+to top,
+rgba(0,0,0,.95),
+rgba(0,0,0,.55),
+transparent
+);
+}
+
+.portfolio-overlay span{
+font-size:7px;
+letter-spacing:3px;
+color:var(--gold);
+}
+
+.portfolio-overlay h3{
+font-family:"Cormorant Garamond",serif;
+font-size:34px;
+font-weight:500;
+color:#f1e8da;
+margin-top:7px;
+}
+
+
+@media(max-width:700px){
+
+.portfolio-grid{
+grid-template-columns:1fr;
+margin-top:45px;
+}
+
+.portfolio-wide{
+grid-column:auto;
+}
+
+.portfolio-wide .portfolio-image{
+aspect-ratio:4/5;
+}
+
+.portfolio-image{
+aspect-ratio:4/5;
+}
+
+.portfolio-overlay{
+padding:45px 22px 23px;
+}
+
+.portfolio-overlay h3{
+font-size:28px;
+}
+
+}
+
+/* OPTIONAL EXTRAS */
+
+.extras{
+margin-top:45px;
+border:1px solid rgba(212,175,106,.25);
+background:
+linear-gradient(
+135deg,
+rgba(212,175,106,.06),
+transparent 50%
+),
+#090909;
+position:relative;
+overflow:hidden;
+}
+
+.extras:before{
+content:"EXTRA";
+position:absolute;
+right:-15px;
+bottom:-35px;
+font-family:"Cormorant Garamond",serif;
+font-size:130px;
+color:rgba(212,175,106,.025);
+pointer-events:none;
+}
+
+.extras-title{
+padding:25px 30px;
+border-bottom:1px solid rgba(212,175,106,.14);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.extras-title span:first-child{
+color:var(--gold);
+font-size:9px;
+letter-spacing:4px;
+}
+
+.extras-title span:last-child{
+color:#555047;
+font-size:8px;
+letter-spacing:2px;
+}
+
+.extra-grid{
+display:grid;
+grid-template-columns:repeat(5,1fr);
+}
+
+.extra{
+padding:27px 20px;
+border-right:1px solid rgba(212,175,106,.1);
+transition:.4s;
+}
+
+.extra:last-child{
+border-right:none;
+}
+
+.extra:hover{
+background:rgba(212,175,106,.035);
+}
+
+.extra h4{
+font-family:"Cormorant Garamond",serif;
+font-size:20px;
+font-weight:500;
+color:#ddd5c7;
+line-height:1.1;
+}
+
+.extra p{
+color:var(--gold);
+font-size:8px;
+letter-spacing:1.5px;
+margin-top:10px;
+}
+
+
+/* =========================================================
+   EMPIRE ORDER
+========================================================= */
+
+.order{
+max-width:none;
+background:
+radial-gradient(
+circle at 0% 50%,
+rgba(212,175,106,.07),
+transparent 30%
+),
+#080808;
+}
+
+.order-inner{
+max-width:1400px;
+margin:auto;
+}
+
+.order-intro{
+max-width:700px;
+margin-bottom:65px;
+}
+
+.order-intro h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(58px,8vw,100px);
+font-weight:500;
+line-height:.84;
+letter-spacing:-3px;
+margin:15px 0 25px;
+color:#f1e9dc;
+}
+
+.order-intro h2 span{
+color:var(--gold);
+font-style:italic;
+}
+
+.order-intro p{
+max-width:520px;
+color:#7d766c;
+font-size:11px;
+line-height:2;
+}
+
+
+.order-layout{
+display:grid;
+grid-template-columns:minmax(0,1.7fr) minmax(250px,.7fr);
+gap:2px;
+}
+
+
+.order-form{
+border:1px solid rgba(212,175,106,.2);
+background:
+linear-gradient(
+145deg,
+#12110f,
+#080808
+);
+padding:42px;
+}
+
+
+.form-heading{
+display:flex;
+align-items:center;
+gap:18px;
+padding-bottom:30px;
+margin-bottom:35px;
+border-bottom:1px solid rgba(212,175,106,.13);
+}
+
+.form-heading span{
+font-size:8px;
+letter-spacing:3px;
+color:var(--gold);
+}
+
+.form-heading h3{
+font-family:"Cormorant Garamond",serif;
+font-size:32px;
+font-weight:500;
+color:#eee6d8;
+}
+
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px 22px;
+}
+
+.form-group{
+min-width:0;
+}
+
+.form-group.full{
+grid-column:1/-1;
+}
+
+.form-group label{
+display:block;
+font-size:7px;
+letter-spacing:3px;
+color:#686157;
+margin-bottom:11px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+width:100%;
+box-sizing:border-box;
+border:1px solid rgba(212,175,106,.16);
+background:#090909;
+color:#e9e1d4;
+padding:17px 16px;
+font-family:"Montserrat",sans-serif;
+font-size:10px;
+outline:none;
+transition:.35s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+color:#4e4942;
+}
+
+.form-group select{
+appearance:auto;
+}
+
+.form-group textarea{
+resize:vertical;
+min-height:150px;
+line-height:1.7;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+border-color:rgba(212,175,106,.65);
+box-shadow:
+0 0 0 1px rgba(212,175,106,.08),
+inset 0 0 25px rgba(212,175,106,.025);
+}
+
+
+.form-bottom{
+margin-top:35px;
+padding-top:25px;
+border-top:1px solid rgba(212,175,106,.13);
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+}
+
+.form-note{
+display:flex;
+gap:12px;
+max-width:260px;
+}
+
+.form-note span{
+color:var(--gold);
+font-size:12px;
+}
+
+.form-note p{
+margin:0;
+color:#69635a;
+font-size:8px;
+line-height:1.7;
+}
+
+
+.order-submit{
+border:none;
+background:var(--gold);
+color:#080808;
+padding:19px 22px;
+min-width:230px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+cursor:pointer;
+font-family:"Montserrat",sans-serif;
+font-size:8px;
+font-weight:700;
+letter-spacing:2px;
+transition:.4s ease;
+}
+
+.order-submit:hover{
+background:var(--gold2);
+transform:translateY(-2px);
+}
+
+.order-submit strong{
+font-size:18px;
+font-weight:400;
+}
+
+
+.order-side{
+border:1px solid rgba(212,175,106,.14);
+background:#0a0a0a;
+padding:42px 35px;
+display:flex;
+flex-direction:column;
+}
+
+.order-side-number{
+font-size:8px;
+letter-spacing:4px;
+color:var(--gold);
+}
+
+.order-side h3{
+font-family:"Cormorant Garamond",serif;
+font-size:45px;
+font-weight:500;
+line-height:.9;
+color:#eee6d8;
+margin:55px 0 25px;
+}
+
+.order-side > p{
+color:#70695f;
+font-size:9px;
+line-height:1.9;
+max-width:230px;
+}
+
+
+.order-process{
+margin-top:auto;
+border-top:1px solid rgba(212,175,106,.13);
+}
+
+.order-process div{
+padding:17px 0;
+border-bottom:1px solid rgba(212,175,106,.09);
+color:#777066;
+font-size:8px;
+letter-spacing:.5px;
+display:flex;
+gap:15px;
+}
+
+.order-process span{
+color:var(--gold);
+font-size:7px;
+letter-spacing:2px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.order-layout{
+grid-template-columns:1fr;
+}
+
+.order-form{
+padding:28px 20px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.form-group.full{
+grid-column:auto;
+}
+
+.form-bottom{
+align-items:stretch;
+flex-direction:column;
+}
+
+.form-note{
+max-width:none;
+}
+
+.order-submit{
+width:100%;
+}
+
+.order-side{
+min-height:430px;
+}
+
+}
+
+
+@media(max-width:500px){
+
+.order-intro h2{
+font-size:55px;
+}
+
+.order-side h3{
+font-size:39px;
+}
+
+}
+
+/* =========================================================
+   EMPIRE PAYMENT
+========================================================= */
+
+.payment{
+background:
+radial-gradient(
+circle at 80% 20%,
+rgba(212,175,106,.08),
+transparent 30%
+),
+#070707;
+max-width:none;
+}
+
+.payment-inner{
+max-width:1400px;
+margin:auto;
+}
+
+.payment-intro{
+max-width:720px;
+margin-bottom:65px;
+}
+
+.payment-intro h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(55px,7vw,90px);
+font-weight:500;
+line-height:.88;
+letter-spacing:-2px;
+margin:15px 0 25px;
+color:#f2eadc;
+}
+
+.payment-intro p{
+max-width:560px;
+color:#817a70;
+font-size:11px;
+line-height:2;
+}
+
+
+.payment-layout{
+display:grid;
+grid-template-columns:minmax(0,1.7fr) minmax(250px,.7fr);
+gap:2px;
+}
+
+
+.payment-card{
+background:
+linear-gradient(
+135deg,
+#15130f,
+#090909
+);
+border:1px solid rgba(212,175,106,.28);
+position:relative;
+overflow:hidden;
+}
+
+.payment-card:before{
+content:"";
+position:absolute;
+width:350px;
+height:350px;
+right:-180px;
+top:-180px;
+border-radius:50%;
+border:1px solid rgba(212,175,106,.1);
+box-shadow:
+0 0 0 35px rgba(212,175,106,.018),
+0 0 0 70px rgba(212,175,106,.012);
+}
+
+.payment-card-top{
+padding:25px 30px;
+border-bottom:1px solid rgba(212,175,106,.14);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+z-index:2;
+}
+
+.payment-card-top span{
+font-family:"Cormorant Garamond",serif;
+font-size:23px;
+letter-spacing:4px;
+color:var(--gold);
+}
+
+.payment-card-top small{
+font-size:7px;
+letter-spacing:3px;
+color:#655e53;
+}
+
+.payment-main{
+padding:40px 42px 42px;
+position:relative;
+z-index:2;
+}
+
+.payment-label{
+font-size:8px;
+letter-spacing:4px;
+color:#6e665b;
+margin-bottom:30px;
+}
+
+.payment-account{
+border-top:1px solid rgba(212,175,106,.13);
+}
+
+.payment-row{
+padding:24px 0;
+border-bottom:1px solid rgba(212,175,106,.11);
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+}
+
+.payment-row span{
+font-size:8px;
+letter-spacing:3px;
+color:#686158;
+}
+
+.payment-row strong{
+font-family:"Cormorant Garamond",serif;
+font-size:23px;
+font-weight:500;
+color:#eee6d8;
+text-align:right;
+}
+
+.payment-row.account-number strong{
+font-family:"Montserrat",sans-serif;
+font-size:25px;
+letter-spacing:3px;
+color:var(--gold2);
+}
+
+
+.payment-warning{
+display:flex;
+gap:15px;
+margin:30px 0;
+padding:20px;
+border:1px solid rgba(212,175,106,.12);
+background:rgba(212,175,106,.025);
+}
+
+.payment-warning span{
+color:var(--gold);
+font-size:13px;
+}
+
+.payment-warning p{
+margin:0;
+color:#777067;
+font-size:9px;
+line-height:1.8;
+}
+
+
+.payment-button{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:19px 22px;
+background:var(--gold);
+color:#090909;
+text-decoration:none;
+font-size:9px;
+font-weight:700;
+letter-spacing:2px;
+transition:.4s ease;
+}
+
+.payment-button:hover{
+background:var(--gold2);
+}
+
+.payment-button small{
+font-size:18px;
+}
+
+
+.payment-side{
+padding:45px 35px;
+border:1px solid rgba(212,175,106,.16);
+background:#0a0a0a;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+min-height:100%;
+}
+
+.side-number{
+font-size:8px;
+letter-spacing:4px;
+color:var(--gold);
+}
+
+.payment-side h3{
+font-family:"Cormorant Garamond",serif;
+font-size:43px;
+font-weight:500;
+line-height:.9;
+color:#eee6d8;
+margin:50px 0 25px;
+}
+
+.payment-side p{
+color:#716a61;
+font-size:9px;
+line-height:1.9;
+max-width:220px;
+}
+
+.side-line{
+height:1px;
+width:55px;
+background:var(--gold);
+margin:30px 0 18px;
+}
+
+.payment-side > span{
+font-size:7px;
+letter-spacing:2px;
+color:#5d574e;
+}
+
+
+
+/* =========================================================
+   EMPIRE CONTACT
+========================================================= */
+
+.contact{
+max-width:none;
+background:
+radial-gradient(
+circle at 50% 100%,
+rgba(212,175,106,.09),
+transparent 35%
+),
+#050505;
+border-top:1px solid rgba(212,175,106,.12);
+}
+
+.contact-inner{
+max-width:1400px;
+margin:auto;
+}
+
+.contact-top{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:30px;
+}
+
+.contact-top h2{
+font-family:"Cormorant Garamond",serif;
+font-size:clamp(55px,8vw,105px);
+font-weight:500;
+line-height:.83;
+letter-spacing:-3px;
+margin-top:18px;
+color:#f1e9dc;
+}
+
+.contact-top h2 span{
+color:var(--gold);
+font-style:italic;
+}
+
+
+.contact-number{
+font-family:"Cormorant Garamond",serif;
+font-size:100px;
+line-height:.7;
+color:rgba(212,175,106,.08);
+}
+
+
+.contact-bottom{
+margin-top:90px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+padding-top:40px;
+border-top:1px solid rgba(212,175,106,.15);
+}
+
+
+.contact-message p{
+max-width:470px;
+color:#817a70;
+font-size:11px;
+line-height:2;
+}
+
+
+.contact-cta{
+margin-top:35px;
+width:min(100%,430px);
+padding:22px 25px;
+border:1px solid rgba(212,175,106,.3);
+display:flex;
+justify-content:space-between;
+align-items:center;
+text-decoration:none;
+color:var(--gold);
+font-size:9px;
+letter-spacing:2px;
+transition:.4s ease;
+}
+
+.contact-cta:hover{
+background:var(--gold);
+color:#070707;
+}
+
+.contact-cta strong{
+font-size:20px;
+font-weight:400;
+}
+
+
+.contact-details{
+border-left:1px solid rgba(212,175,106,.15);
+padding-left:50px;
+}
+
+.contact-detail{
+padding:0 0 28px;
+margin-bottom:28px;
+border-bottom:1px solid rgba(212,175,106,.1);
+}
+
+.contact-detail:last-child{
+margin-bottom:0;
+border-bottom:none;
+}
+
+.contact-detail span{
+display:block;
+font-size:7px;
+letter-spacing:4px;
+color:#625b50;
+margin-bottom:10px;
+}
+
+.contact-detail strong,
+.contact-detail a{
+font-family:"Cormorant Garamond",serif;
+font-size:25px;
+font-weight:500;
+color:#e9e0d2;
+text-decoration:none;
+transition:.3s;
+}
+
+.contact-detail a:hover{
+color:var(--gold);
+}
+
+
+.contact-footer{
+margin-top:100px;
+padding-top:25px;
+border-top:1px solid rgba(212,175,106,.12);
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.contact-footer span{
+font-family:"Cormorant Garamond",serif;
+font-size:25px;
+letter-spacing:5px;
+color:var(--gold);
+}
+
+.contact-footer p{
+font-size:7px;
+letter-spacing:3px;
+color:#575149;
+}
+
+
+
+/* =========================================================
+   PAYMENT + CONTACT MOBILE
+========================================================= */
+
+@media(max-width:800px){
+
+.payment-layout{
+grid-template-columns:1fr;
+}
+
+.payment-side{
+min-height:350px;
+}
+
+.payment-main{
+padding:30px 22px;
+}
+
+.payment-card-top{
+padding:22px;
+}
+
+.payment-row{
+align-items:flex-start;
+flex-direction:column;
+gap:8px;
+}
+
+.payment-row strong{
+text-align:left;
+font-size:21px;
+}
+
+.payment-row.account-number strong{
+font-size:20px;
+}
+
+.contact-top h2{
+font-size:58px;
+}
+
+.contact-number{
+font-size:65px;
+}
+
+.contact-bottom{
+grid-template-columns:1fr;
+gap:50px;
+margin-top:60px;
+}
+
+.contact-details{
+border-left:none;
+border-top:1px solid rgba(212,175,106,.15);
+padding-left:0;
+padding-top:35px;
+}
+
+.contact-footer{
+margin-top:65px;
+}
+
+}
+
+@media(max-width:500px){
+
+.payment-intro h2{
+font-size:54px;
+}
+
+.payment-side h3{
+font-size:38px;
+}
+
+.contact-top h2{
+font-size:48px;
+letter-spacing:-2px;
+}
+
+.contact-number{
+font-size:50px;
+}
+
+.contact-footer{
+align-items:flex-start;
+gap:20px;
+flex-direction:column;
+}
+
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:35px 20px;
+border-top:1px solid rgba(255,255,255,.04);
+color:#555;
+font-size:8px;
+letter-spacing:2px;
+}
+
+footer span{
+color:var(--gold)
+}
+
+
+/* TABLET */
+
+@media(max-width:900px){
+
+nav{
+gap:13px
+}
+
+nav a{
+font-size:8px
+}
+
+.about-grid{
+grid-template-columns:1fr;
+gap:40px
+}
+
+.products{
+grid-template-columns:1fr
+}
+
+.extra-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.extra{
+border-bottom:1px solid rgba(212,175,106,.1);
+}
+
+.extra:nth-child(2n){
+border-right:none
+}
+
+.portfolio-card,
+.portfolio-card:nth-child(n){
+grid-column:span 6;
+}
+
+.payment-grid{
+grid-template-columns:1fr
+}
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+header{
+padding:15px 4%
+}
+
+.logo{
+font-size:25px;
+letter-spacing:6px
+}
+
+nav{
+gap:10px
+}
+
+nav a{
+font-size:7px;
+letter-spacing:1px
+}
+
+.hero h1{
+font-size:80px;
+letter-spacing:6px
+}
+
+.hero:before{
+width:400px;
+height:400px
+}
+
+.hero:after{
+width:560px;
+height:560px
+}
+
+section{
+padding:85px 5%
+}
+
+.section-head h2{
+font-size:45px
+}
+
+.about-mark{
+min-height:280px
+}
+
+.big-e{
+font-size:120px
+}
+
+
+/* MOBILE SERVICES */
+
+.services:before{
+font-size:100px;
+top:150px;
+}
+
+.services .section-head{
+margin-bottom:45px;
+}
+
+.service-category{
+margin-bottom:12px;
+}
+
+.service-category summary{
+min-height:100px;
+padding:20px 17px;
+gap:10px;
+}
+
+.category-left{
+gap:12px;
+}
+
+.category-number{
+min-width:20px;
+font-size:6px;
+}
+
+.category-icon{
+width:42px;
+height:42px;
+font-size:16px;
+}
+
+.category-title{
+font-size:26px;
+}
+
+.category-subtitle{
+font-size:6px;
+letter-spacing:2px;
+margin-top:6px;
+}
+
+.category-toggle{
+width:38px;
+height:38px;
+font-size:19px;
+}
+
+.product{
+min-height:175px;
+padding:27px 22px;
+}
+
+.product h3{
+font-size:24px;
+max-width:72%;
+}
+
+.product p{
+font-size:8px;
+max-width:90%;
+}
+
+.product-price{
+top:26px;
+right:20px;
+font-size:9px;
+}
+
+.extras{
+margin-top:30px;
+}
+
+.extras-title{
+padding:20px;
+}
+
+.extra-grid{
+grid-template-columns:1fr
+}
+
+.extra{
+border-right:none;
+border-bottom:1px solid rgba(212,175,106,.1);
+padding:22px 20px;
+}
+
+.extra:last-child{
+border-bottom:none
+}
+
+
+/* OTHER MOBILE SECTIONS */
+
+.portfolio-card,
+.portfolio-card:nth-child(n){
+grid-column:span 12;
+min-height:270px;
+}
+
+.order-box{
+padding:25px 18px
+}
+
+.contact h2{
+font-size:45px
+}
+
+.account{
+font-size:27px
+}
+
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<header>
-  <nav class="navbar">
-    <a href="#home" class="logo">EMPIRE</a>
 
-    <div class="nav-links">
-      <a href="#services">SERVICES</a>
-      <a href="#order">ORDER</a>
-      <a href="#payment">PAYMENT</a>
-      <a href="#contact">CONTACT</a>
-    </div>
-  </nav>
+<!-- HEADER -->
+
+<header id="header">
+
+<div class="nav">
+
+<a href="#home" class="logo">
+
+EMPIRE
+
+<small>GRAPHIC DESIGN STUDIO</small>
+
+</a>
+
+<nav>
+
+<a href="#about">ABOUT</a>
+<a href="#services">SERVICES</a>
+<a href="#portfolio">PORTFOLIO</a>
+<a href="#order">ORDER</a>
+<a href="#contact">CONTACT</a>
+
+</nav>
+
+</div>
+
 </header>
 
-<main>
+
+<!-- HERO -->
 
 <section class="hero" id="home">
-  <div class="hero-content">
 
-    <div class="small-title">
-      LUXURY GRAPHIC DESIGN STUDIO
-    </div>
+<div class="hero-content">
 
-    <h1>EMPIRE</h1>
+<div class="eyebrow">
+THE ART OF DISTINCTION
+</div>
 
-    <p>
-      Elegant designs created to make your special moments
-      unforgettable.
-    </p>
+<h1>
+EM<span>PIRE</span>
+</h1>
 
-    <div class="buttons">
-      <a href="#services" class="button gold">
-        EXPLORE SERVICES
-      </a>
+<div class="hero-line"></div>
 
-      <a href="#order" class="button">
-        PLACE AN ORDER
-      </a>
-    </div>
+<p>
+A premium graphic design studio creating refined,
+memorable and beautifully crafted visuals for life's
+most important moments.
+</p>
 
-  </div>
-</section>
+<div class="hero-buttons">
 
+<a href="#order" class="btn gold">
+Commission a Design
+</a>
 
-<section id="services">
+<a href="#portfolio" class="btn">
+Explore Our Work
+</a>
 
-  <div class="section-inner">
+</div>
 
-    <div class="section-heading">
+</div>
 
-      <div class="small-title">
-        WHAT WE CREATE
-      </div>
-
-      <h2>Our Services</h2>
-
-      <p>
-        Premium card designs carefully created for your
-        most important occasions.
-      </p>
-
-    </div>
-
-
-    <div class="services">
-
-      <div class="card">
-        <div class="icon">🎂</div>
-
-        <h3>Birthday Cards</h3>
-
-        <p>
-          Beautiful custom designs made to celebrate
-          birthdays in style.
-        </p>
-
-        <div class="price">₦2,000</div>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">💍</div>
-
-        <h3>Wedding Cards</h3>
-
-        <p>
-          Elegant wedding invitations designed for
-          unforgettable moments.
-        </p>
-
-        <div class="price">₦5,000</div>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">💼</div>
-
-        <h3>Official Cards</h3>
-
-        <p>
-          Professional and clean designs for official
-          events and occasions.
-        </p>
-
-        <div class="price">₦3,000</div>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">✨</div>
-
-        <h3>Other Events</h3>
-
-        <p>
-          Custom designs for other special events,
-          according to your requirements.
-        </p>
-
-        <div class="price">₦2,000–₦15,000</div>
-      </div>
-
-    </div>
-
-  </div>
+<div class="scroll">
+SCROLL TO DISCOVER
+</div>
 
 </section>
 
 
-<section class="order-section" id="order">
+<!-- ABOUT -->
 
-  <div class="section-inner">
+<section id="about">
 
-    <div class="section-heading">
+<div class="section-head">
 
-      <div class="small-title">
-        LET'S CREATE
-      </div>
+<div class="kicker">
+THE EMPIRE STANDARD
+</div>
 
-      <h2>Place Your Order</h2>
+<h2>
+Designed to be remembered.
+</h2>
 
-      <p>
-        Fill in your details and your order will be
-        prepared for WhatsApp.
-      </p>
+</div>
 
-    </div>
+<div class="about-grid">
 
+<div class="about-mark">
 
-    <div class="order-box">
+<div class="big-e">
+E
+</div>
 
-      <form onsubmit="sendOrder(event)">
+</div>
 
-        <label>
-          Your Name
+<div class="about-copy">
 
-          <input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-            required
-          >
-        </label>
+<h3>
+More than design.<br>
+<span>A statement.</span>
+</h3>
 
+<p>
+At EMPIRE, every design is created with intention.
+We combine elegant composition, striking typography
+and thoughtful detail to turn ordinary announcements
+into memorable visual experiences.
+</p>
 
-        <label>
-          WhatsApp Number
+<p>
+Whether it is a birthday, wedding, official occasion
+or special event, your design deserves to feel as
+important as the moment itself.
+</p>
 
-          <input
-            type="tel"
-            id="phone"
-            placeholder="Enter your WhatsApp number"
-            required
-          >
-        </label>
+<div class="signature">
+EMPIRE
+</div>
 
+</div>
 
-        <label>
-          Card Type
-
-          <select id="card" required>
-
-            <option value="">
-              Select a card
-            </option>
-
-            <option value="Birthday Card - ₦2,000">
-              Birthday Card — ₦2,000
-            </option>
-
-            <option value="Wedding Card - ₦5,000">
-              Wedding Card — ₦5,000
-            </option>
-
-            <option value="Official Card - ₦3,000">
-              Official Card — ₦3,000
-            </option>
-
-            <option value="Other Event Card - ₦2,000 to ₦15,000">
-              Other Event Card — ₦2,000–₦15,000
-            </option>
-
-          </select>
-
-        </label>
-
-
-        <label>
-          Event Date
-
-          <input
-            type="date"
-            id="date"
-            required
-          >
-        </label>
-
-
-        <label>
-          Design Details
-
-          <textarea
-            id="details"
-            placeholder="Tell us what you want on the design..."
-            required
-          ></textarea>
-
-        </label>
-
-
-        <button
-          type="submit"
-          class="submit-button"
-        >
-          SEND ORDER ON WHATSAPP
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="payment-section" id="payment">
+<!-- SERVICES -->
 
-  <div class="section-inner">
+<section class="services" id="services">
 
-    <div class="section-heading">
+<div class="services-inner">
 
-      <div class="small-title">
-        PAYMENT
-      </div>
+<div class="section-head">
 
-      <h2>Payment Details</h2>
+<div class="kicker">
+WHAT WE CREATE
+</div>
 
-      <p>
-        After placing your order, make your payment
-        using the account below.
-      </p>
+<h2>
+Our Services
+</h2>
 
-    </div>
+<p>
+Explore the EMPIRE collection. Open a category to
+discover our complete range of premium designs.
+</p>
 
-
-    <div class="payment-box">
-
-      <h3>Bank Transfer</h3>
-
-
-      <div class="payment-detail">
-        <span>BANK</span>
-        <strong>PalmPay Limited</strong>
-      </div>
+</div>
 
 
-      <div class="payment-detail">
-        <span>ACCOUNT NAME</span>
-        <strong>ATENAGA KAREEN EGWONO</strong>
-      </div>
+<!-- BIRTHDAY DESIGNS -->
+
+<details class="service-category">
+
+<summary>
+
+<div class="category-left">
+
+<div class="category-number">
+01
+</div>
+
+<div class="category-icon">
+✦
+</div>
+
+<div>
+
+<div class="category-title">
+Birthday Designs
+</div>
+
+<div class="category-subtitle">
+CELEBRATE · PERSONALISE · REMEMBER
+</div>
+
+</div>
+
+</div>
+
+<div class="category-toggle">
++
+</div>
+
+</summary>
 
 
-      <div class="payment-detail">
-        <span>ACCOUNT NUMBER</span>
-        <strong>9033641117</strong>
-      </div>
+<div class="products">
+
+<div class="product">
+
+<div class="product-tag">
+BIRTHDAY · 01
+</div>
+
+<h3>
+Standard Birthday Card
+</h3>
+
+<p>
+Elegant birthday artwork for a simple and beautiful celebration.
+</p>
+
+<div class="product-price">
+₦2,000
+</div>
+
+</div>
 
 
-      <p class="payment-note">
-        Please confirm the account name before making
-        your transfer. After payment, send your receipt
-        through WhatsApp with your order details.
-      </p>
+<div class="product featured">
+
+<div class="product-tag">
+BIRTHDAY · 02
+</div>
+
+<h3>
+Premium Birthday Card
+</h3>
+
+<p>
+A richer, more detailed birthday design with a refined EMPIRE finish.
+</p>
+
+<div class="product-price">
+₦3,500
+</div>
+
+</div>
 
 
-      <a
-        class="button gold"
-        href="https://wa.me/2348029580490?text=Hello%20EMPIRE!%20I%20have%20made%20a%20payment.%20I%20would%20like%20to%20send%20my%20payment%20receipt."
-        target="_blank"
-      >
-        SEND PAYMENT RECEIPT
-      </a>
+<div class="product">
 
-    </div>
+<div class="product-tag">
+BIRTHDAY · 03
+</div>
 
-  </div>
+<h3>
+Birthday Flyer
+</h3>
+
+<p>
+Eye-catching flyer design created for birthdays and celebrations.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+BIRTHDAY · 04
+</div>
+
+<h3>
+Birthday Invitation
+</h3>
+
+<p>
+Elegant invitation artwork designed around your celebration.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+BIRTHDAY · 05
+</div>
+
+<h3>
+Birthday Banner Design
+</h3>
+
+<p>
+Large-format birthday artwork suitable for your celebration space.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+BIRTHDAY · 06
+</div>
+
+<h3>
+Birthday Poster
+</h3>
+
+<p>
+Bold and polished poster artwork for a memorable announcement.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+BIRTHDAY · 07
+</div>
+
+<h3>
+Birthday Social Media Design
+</h3>
+
+<p>
+Premium social artwork created for digital sharing.
+</p>
+
+<div class="product-price">
+₦2,000
+</div>
+
+</div>
+
+
+<div class="product featured">
+
+<div class="product-tag">
+BIRTHDAY · SIGNATURE
+</div>
+
+<h3>
+Birthday Design Bundle
+</h3>
+
+<p>
+A coordinated collection for clients who want multiple birthday designs.
+</p>
+
+<div class="product-price">
+₦7,000+
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- WEDDING DESIGNS -->
+
+<details class="service-category">
+
+<summary>
+
+<div class="category-left">
+
+<div class="category-number">
+02
+</div>
+
+<div class="category-icon">
+◇
+</div>
+
+<div>
+
+<div class="category-title">
+Wedding Designs
+</div>
+
+<div class="category-subtitle">
+LOVE · ELEGANCE · BEGINNINGS
+</div>
+
+</div>
+
+</div>
+
+<div class="category-toggle">
++
+</div>
+
+</summary>
+
+
+<div class="products">
+
+<div class="product featured">
+
+<div class="product-tag">
+WEDDING · 01
+</div>
+
+<h3>
+Wedding Invitation
+</h3>
+
+<p>
+Sophisticated invitation artwork designed for your special day.
+</p>
+
+<div class="product-price">
+₦5,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 02
+</div>
+
+<h3>
+Traditional Wedding Invitation
+</h3>
+
+<p>
+A refined design celebrating the beauty of traditional ceremonies.
+</p>
+
+<div class="product-price">
+₦5,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 03
+</div>
+
+<h3>
+Engagement Invitation
+</h3>
+
+<p>
+Elegant invitation artwork for your engagement celebration.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 04
+</div>
+
+<h3>
+Wedding Programme
+</h3>
+
+<p>
+Beautiful programme design for your ceremony and celebration.
+</p>
+
+<div class="product-price">
+₦5,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 05
+</div>
+
+<h3>
+Wedding Reception Design
+</h3>
+
+<p>
+Coordinated reception artwork with a sophisticated visual style.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 06
+</div>
+
+<h3>
+Wedding Save-the-Date
+</h3>
+
+<p>
+A polished announcement designed to build anticipation.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+WEDDING · 07
+</div>
+
+<h3>
+Wedding Flyer
+</h3>
+
+<p>
+Premium flyer artwork for wedding announcements and promotions.
+</p>
+
+<div class="product-price">
+₦5,000
+</div>
+
+</div>
+
+
+<div class="product featured">
+
+<div class="product-tag">
+WEDDING · SIGNATURE
+</div>
+
+<h3>
+Complete Wedding Design Package
+</h3>
+
+<p>
+A coordinated collection of wedding designs for a complete visual experience.
+</p>
+
+<div class="product-price">
+₦15,000+
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- OFFICIAL & PROFESSIONAL -->
+
+<details class="service-category">
+
+<summary>
+
+<div class="category-left">
+
+<div class="category-number">
+03
+</div>
+
+<div class="category-icon">
+▱
+</div>
+
+<div>
+
+<div class="category-title">
+Official &amp; Professional
+</div>
+
+<div class="category-subtitle">
+BUSINESS · FORMAL · PROFESSIONAL
+</div>
+
+</div>
+
+</div>
+
+<div class="category-toggle">
++
+</div>
+
+</summary>
+
+
+<div class="products">
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 01
+</div>
+
+<h3>
+Official Invitation
+</h3>
+
+<p>
+Clean and polished invitation designs for formal occasions.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 02
+</div>
+
+<h3>
+Business Flyer
+</h3>
+
+<p>
+Professional promotional artwork designed to present your business clearly.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 03
+</div>
+
+<h3>
+Business Poster
+</h3>
+
+<p>
+Bold professional poster artwork for business announcements.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 04
+</div>
+
+<h3>
+Event Programme
+</h3>
+
+<p>
+Structured and elegant programme artwork for formal events.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 05
+</div>
+
+<h3>
+Certificate Design
+</h3>
+
+<p>
+Formal certificate artwork with a polished professional finish.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 06
+</div>
+
+<h3>
+Business Card
+</h3>
+
+<p>
+Clean and memorable business card design for professional identity.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+OFFICIAL · 07
+</div>
+
+<h3>
+Letterhead Design
+</h3>
+
+<p>
+Professional letterhead artwork for your business communication.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product featured">
+
+<div class="product-tag">
+OFFICIAL · SIGNATURE
+</div>
+
+<h3>
+Professional Design Package
+</h3>
+
+<p>
+A coordinated collection of professional business designs.
+</p>
+
+<div class="product-price">
+₦10,000+
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- EVENTS & CELEBRATIONS -->
+
+<details class="service-category">
+
+<summary>
+
+<div class="category-left">
+
+<div class="category-number">
+04
+</div>
+
+<div class="category-icon">
+✧
+</div>
+
+<div>
+
+<div class="category-title">
+Events &amp; Celebrations
+</div>
+
+<div class="category-subtitle">
+EVENTS · CEREMONIES · OCCASIONS
+</div>
+
+</div>
+
+</div>
+
+<div class="category-toggle">
++
+</div>
+
+</summary>
+
+
+<div class="products">
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 01
+</div>
+
+<h3>
+Event Flyer
+</h3>
+
+<p>
+Stylish event artwork designed to attract attention.
+</p>
+
+<div class="product-price">
+₦2,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 02
+</div>
+
+<h3>
+Event Poster
+</h3>
+
+<p>
+Bold poster design for events, announcements and celebrations.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 03
+</div>
+
+<h3>
+Event Invitation
+</h3>
+
+<p>
+Elegant invitation artwork for special occasions.
+</p>
+
+<div class="product-price">
+₦2,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 04
+</div>
+
+<h3>
+Concert / Festival Flyer
+</h3>
+
+<p>
+High-impact promotional artwork for concerts and festivals.
+</p>
+
+<div class="product-price">
+₦4,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 05
+</div>
+
+<h3>
+Naming Ceremony Design
+</h3>
+
+<p>
+Beautiful celebratory artwork for naming ceremonies.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 06
+</div>
+
+<h3>
+Graduation Design
+</h3>
+
+<p>
+Elegant graduation artwork created to mark an important milestone.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-tag">
+EVENT · 07
+</div>
+
+<h3>
+Anniversary Design
+</h3>
+
+<p>
+Refined artwork for anniversaries and meaningful celebrations.
+</p>
+
+<div class="product-price">
+₦3,000
+</div>
+
+</div>
+
+
+<div class="product featured">
+
+<div class="product-tag">
+EVENT · SIGNATURE
+</div>
+
+<h3>
+Custom Event Package
+</h3>
+
+<p>
+A flexible collection created around your specific event requirements.
+</p>
+
+<div class="product-price">
+₦5,000+
+</div>
+
+</div>
+
+</div>
+
+</details>
+
+
+<!-- OPTIONAL EXTRAS -->
+
+<div class="extras">
+
+<div class="extras-title">
+
+<span>
+OPTIONAL EXTRAS
+</span>
+
+<span>
+ENHANCE YOUR DESIGN
+</span>
+
+</div>
+
+
+<div class="extra-grid">
+
+<div class="extra">
+
+<h4>
+Additional Variation
+</h4>
+
+<p>
+₦1,000+
+</p>
+
+</div>
+
+
+<div class="extra">
+
+<h4>
+Rush / Urgent Design
+</h4>
+
+<p>
+₦2,000+
+</p>
+
+</div>
+
+
+<div class="extra">
+
+<h4>
+Major Revision
+</h4>
+
+<p>
+₦1,000+
+</p>
+
+</div>
+
+
+<div class="extra">
+
+<h4>
+Social Media Version
+</h4>
+
+<p>
+₦1,500+
+</p>
+
+</div>
+
+
+<div class="extra">
+
+<h4>
+Additional Size / Format
+</h4>
+
+<p>
+₦1,000+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+<div class="section-head">
+
+<div class="kicker">
+SELECTED WORK
+</div>
+
+<h2>
+Portfolio
+</h2>
+
+<p>
+A selection of work created with the empire signature.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-01.jpg"
+alt="Birthday design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+01 · BIRTHDAY
+</span>
+
+<h3>
+Celebration
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-02.jpg"
+alt="Wedding design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+02 · WEDDING
+</span>
+
+<h3>
+Wedding Invitation
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-03.jpg"
+alt="Business design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+03 · BUSINESS
+</span>
+
+<h3>
+Professional Identity
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-04.jpg"
+alt="Event design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+04 · EVENTS
+</span>
+
+<h3>
+Event Experience
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-05.jpg"
+alt="Celebration design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+05 · CELEBRATION
+</span>
+
+<h3>
+Special Moments
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-06.jpg"
+alt="Official design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+06 · OFFICIAL
+</span>
+
+<h3>
+Formal Collection
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-item portfolio-wide">
+
+<div class="portfolio-image">
+
+<img
+src="portfolio-07.jpg"
+alt="Signature empire design"
+>
+
+<div class="portfolio-overlay">
+
+<span>
+07 · SIGNATURE
+</span>
+
+<h3>
+The empire Collection
+</h3>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- ORDER -->
+
+<section class="order" id="order">
+
+<div class="order-inner">
+
+<div class="order-intro">
+
+<div class="kicker">
+LET'S CREATE
+</div>
+
+<h2>
+Place Your
+<br>
+<span>Order.</span>
+</h2>
+
+<p>
+Tell us what you need and we'll prepare your design commission for WhatsApp.
+</p>
+
+</div>
+
+
+<div class="order-layout">
+
+
+<!-- ORDER FORM -->
+
+<form
+class="order-form"
+onsubmit="sendOrder(event)"
+>
+
+
+<div class="form-heading">
+
+<span>
+01
+</span>
+
+<h3>
+Your Details
+</h3>
+
+</div>
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label for="name">
+YOUR NAME
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="phone">
+WHATSAPP NUMBER
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter your WhatsApp number"
+required
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="design">
+SELECT YOUR DESIGN
+</label>
+
+<select
+id="design"
+required
+>
+
+<option value="">
+Select a design
+</option>
+
+
+<option>
+Standard Birthday Card — ₦2,000
+</option>
+
+<option>
+Premium Birthday Card — ₦3,500
+</option>
+
+<option>
+Birthday Flyer — ₦3,000
+</option>
+
+<option>
+Birthday Invitation — ₦3,000
+</option>
+
+<option>
+Birthday Banner Design — ₦4,000
+</option>
+
+<option>
+Birthday Poster — ₦4,000
+</option>
+
+<option>
+Birthday Social Media Design — ₦2,000
+</option>
+
+<option>
+Birthday Design Bundle — ₦7,000+
+</option>
+
+
+<option>
+Wedding Invitation — ₦5,000
+</option>
+
+<option>
+Traditional Wedding Invitation — ₦5,000
+</option>
+
+<option>
+Engagement Invitation — ₦4,000
+</option>
+
+<option>
+Wedding Programme — ₦5,000
+</option>
+
+<option>
+Wedding Reception Design — ₦4,000
+</option>
+
+<option>
+Wedding Save-the-Date — ₦3,000
+</option>
+
+<option>
+Wedding Flyer — ₦5,000
+</option>
+
+<option>
+Complete Wedding Design Package — ₦15,000+
+</option>
+
+
+<option>
+Official Invitation — ₦3,000
+</option>
+
+<option>
+Business Flyer — ₦3,000
+</option>
+
+<option>
+Business Poster — ₦4,000
+</option>
+
+<option>
+Event Programme — ₦4,000
+</option>
+
+<option>
+Certificate Design — ₦3,000
+</option>
+
+<option>
+Business Card — ₦3,000
+</option>
+
+<option>
+Letterhead Design — ₦3,000
+</option>
+
+<option>
+Professional Design Package — ₦10,000+
+</option>
+
+
+<option>
+Event Flyer — ₦2,000
+</option>
+
+<option>
+Event Poster — ₦3,000
+</option>
+
+<option>
+Event Invitation — ₦2,000
+</option>
+
+<option>
+Concert / Festival Flyer — ₦4,000
+</option>
+
+<option>
+Naming Ceremony Design — ₦3,000
+</option>
+
+<option>
+Graduation Design — ₦3,000
+</option>
+
+<option>
+Anniversary Design — ₦3,000
+</option>
+
+<option>
+Custom Event Package — ₦5,000+
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="date">
+EVENT DATE
+</label>
+
+<input
+type="date"
+id="date"
+>
+
+</div>
+
+
+<div class="form-group full">
+
+<label for="details">
+DESIGN DETAILS
+</label>
+
+<textarea
+id="details"
+rows="7"
+placeholder="Tell us about your design, colours, text, theme, photos and any other details..."
+></textarea>
+
+</div>
+
+</div>
+
+
+<div class="form-bottom">
+
+<div class="form-note">
+
+<span>
+✦
+</span>
+
+<p>
+Your order details will be sent directly to EMPIRE on WhatsApp.
+</p>
+
+</div>
+
+
+<button
+type="submit"
+class="order-submit"
+>
+
+<span>
+SEND ORDER ON WHATSAPP
+</span>
+
+<strong>
+↗
+</strong>
+
+</button>
+
+</div>
+
+</form>
+
+
+<!-- ORDER SIDE -->
+
+<div class="order-side">
+
+<div class="order-side-number">
+01
+</div>
+
+<h3>
+Your idea.
+<br>
+Our craft.
+</h3>
+
+<p>
+Every EMPIRE design begins with your vision and is carefully shaped into something distinctive.
+</p>
+
+<div class="order-process">
+
+<div>
+<span>01</span>
+Tell us what you need
+</div>
+
+<div>
+<span>02</span>
+Confirm your design
+</div>
+
+<div>
+<span>03</span>
+Make payment
+</div>
+
+<div>
+<span>04</span>
+Receive your design
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PAYMENT -->
+
+<section class="payment" id="payment">
+
+<div class="payment-inner">
+
+<div class="payment-intro">
+
+<div class="kicker">
+PAYMENT
+</div>
+
+<h2>
+Secure Your
+<br>
+Commission
+</h2>
+
+<p>
+Once your design has been confirmed, complete your payment using the official EMPIRE account details below.
+</p>
+
+</div>
+
+
+<div class="payment-layout">
+
+
+<div class="payment-card">
+
+<div class="payment-card-top">
+
+<span>
+EMPIRE
+</span>
+
+<small>
+OFFICIAL PAYMENT DETAILS
+</small>
+
+</div>
+
+
+<div class="payment-main">
+
+<div class="payment-label">
+BANK TRANSFER
+</div>
+
+
+<div class="payment-account">
+
+<div class="payment-row">
+
+<span>
+BANK
+</span>
+
+<strong>
+PalmPay Limited
+</strong>
+
+</div>
+
+
+<div class="payment-row">
+
+<span>
+ACCOUNT NAME
+</span>
+
+<strong>
+ATENAGA KAREEN EGWONO
+</strong>
+
+</div>
+
+
+<div class="payment-row account-number">
+
+<span>
+ACCOUNT NUMBER
+</span>
+
+<strong>
+9033641117
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="payment-warning">
+
+<span>
+✦
+</span>
+
+<p>
+Please confirm the account name before making your transfer. After payment, send your receipt through WhatsApp with your order details.
+</p>
+
+</div>
+
+
+<a
+class="payment-button"
+href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20have%20made%20payment%20for%20my%20design.%20I%20would%20like%20to%20send%20my%20payment%20receipt."
+target="_blank"
+>
+
+<span>
+SEND PAYMENT RECEIPT
+</span>
+
+<small>
+↗
+</small>
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="payment-side">
+
+<div class="side-number">
+01
+</div>
+
+<h3>
+Simple.
+<br>
+Secure.
+<br>
+Direct.
+</h3>
+
+<p>
+Your payment confirms your commission and allows us to begin working on your design.
+</p>
+
+<div class="side-line"></div>
+
+<span>
+EMPIRE · GRAPHIC DESIGN STUDIO
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
-  <div class="section-inner">
-
-    <div class="section-heading">
-
-      <div class="small-title">
-        GET IN TOUCH
-      </div>
-
-      <h2>Contact EMPIRE</h2>
-
-      <p>
-        Ready for your design? Contact us directly on
-        WhatsApp.
-      </p>
-
-    </div>
+<div class="contact-inner">
 
 
-    <p><strong>Location:</strong> Abuja, Nigeria</p>
+<div class="contact-top">
 
-    <p><strong>WhatsApp:</strong> 08029580490</p>
+<div>
+
+<div class="kicker">
+GET IN TOUCH
+</div>
+
+<h2>
+Let's Create
+<br>
+Something
+<span>Distinctive.</span>
+</h2>
+
+</div>
 
 
-    <div class="buttons">
+<div class="contact-number">
+04
+</div>
 
-      <a
-        class="button gold"
-        href="https://wa.me/2348029580490"
-        target="_blank"
-      >
-        CHAT ON WHATSAPP
-      </a>
+</div>
 
-    </div>
 
-  </div>
+<div class="contact-bottom">
+
+
+<div class="contact-message">
+
+<p>
+Have a design in mind? Whether it's a celebration, wedding, business project or something completely custom, EMPIRE is ready to bring your vision to life.
+</p>
+
+<a
+class="contact-cta"
+href="https://wa.me/2348029580490?text=Hello%20EMPIRE%2C%20I%20would%20like%20to%20make%20a%20design%20enquiry."
+target="_blank"
+>
+
+<span>
+START A CONVERSATION
+</span>
+
+<strong>
+↗
+</strong>
+
+</a>
+
+</div>
+
+
+<div class="contact-details">
+
+
+<div class="contact-detail">
+
+<span>
+WHATSAPP
+</span>
+
+<a
+href="https://wa.me/2348029580490"
+target="_blank"
+>
+08029580490
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<span>
+LOCATION
+</span>
+
+<strong>
+Abuja, Nigeria
+</strong>
+
+</div>
+
+
+<div class="contact-detail">
+
+<span>
+STUDIO
+</span>
+
+<strong>
+EMPIRE
+<br>
+GRAPHIC DESIGN STUDIO
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="contact-footer">
+
+<span>
+EMPIRE
+</span>
+
+<p>
+THE ART OF DISTINCTION
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-</main>
 
+
+<!-- FOOTER -->
 
 <footer>
-  © 2026 EMPIRE Graphic Design. All rights reserved.
+
+© 2026 <span>EMPIRE</span> · GRAPHIC DESIGN STUDIO
+
+</footer>
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 <span>EMPIRE</span> · GRAPHIC DESIGN STUDIO
+
 </footer>
 
 
+<!-- JAVASCRIPT -->
+
 <script>
 
-function sendOrder(event) {
+window.addEventListener("scroll",()=>{
 
-  event.preventDefault();
+const header=document.getElementById("header");
 
-  const name =
-    document.getElementById("name").value;
+if(window.scrollY>30){
 
-  const phone =
-    document.getElementById("phone").value;
+header.classList.add("scrolled");
 
-  const card =
-    document.getElementById("card").value;
+}else{
 
-  const date =
-    document.getElementById("date").value;
+header.classList.remove("scrolled");
 
-  const details =
-    document.getElementById("details").value;
+}
+
+});
 
 
-  const message =
-    "Hello EMPIRE!%0A%0A" +
-    "I would like to place an order.%0A%0A" +
-    "Name: " +
-    encodeURIComponent(name) +
-    "%0A" +
-    "WhatsApp: " +
-    encodeURIComponent(phone) +
-    "%0A" +
-    "Card: " +
-    encodeURIComponent(card) +
-    "%0A" +
-    "Event Date: " +
-    encodeURIComponent(date) +
-    "%0A" +
-    "Design Details: " +
-    encodeURIComponent(details);
+function sendOrder(event){
+
+event.preventDefault();
 
 
-  window.open(
-    "https://wa.me/2348029580490?text=" +
-    message,
-    "_blank"
-  );
+const name=
+document.getElementById("name").value;
+
+
+const design=
+document.getElementById("design").value;
+
+
+const date=
+document.getElementById("date").value ||
+"Not specified";
+
+
+const details=
+document.getElementById("details").value ||
+"No additional details";
+
+
+const message=
+`Hello EMPIRE,
+
+I would like to commission a design.
+
+Name: ${name}
+Design: ${design}
+Event Date: ${date}
+
+Design Details:
+${details}`;
+
+
+window.open(
+
+"https://wa.me/2348029580490?text="+
+encodeURIComponent(message),
+
+"_blank"
+
+);
 
 }
 
